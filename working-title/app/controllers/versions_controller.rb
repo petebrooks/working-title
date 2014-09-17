@@ -9,13 +9,13 @@ class VersionsController < ApplicationController
   end
 
   def show
-    @project = Project.find(params[:project_id])
+
     @version = Version.find(params[:id])
   end
 
   def create
-    @project = Project.find(params[:project_id])
-    @version = @project.versions.create(version_params)
+    @version = Version.create(version_params)
+    redirect_to version_path(@version)
   end
 
   private

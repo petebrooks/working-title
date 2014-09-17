@@ -5,6 +5,14 @@ class Version < ActiveRecord::Base
   has_many :votes, as: :voteable
   has_many :children, class_name: "Version", foreign_key: "previous_version_id"
 
+  before_validation :check_project
+
+  validates :project, presence: true
+
+  def check_project
+    self.project ||= self.previous_version.project
+  end
+
   def text_before
     self.previous_version.all_previous_text
   end
