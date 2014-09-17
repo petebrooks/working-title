@@ -29,7 +29,13 @@ gem 'jbuilder', '~> 1.2'
 
 group :test, :development do
   gem 'faker'
+<<<<<<< HEAD
   gem 'pry'
+=======
+  gem 'rspec-rails', '~> 3.0.0'
+  gem "factory_girl_rails", "~> 4.0"
+  gem 'shoulda-matchers', require: false
+>>>>>>> a6b4b2cfb4a263b4fec833b7b2100708f6274434
 end
 
 group :doc do
