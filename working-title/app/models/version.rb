@@ -14,10 +14,12 @@ class Version < ActiveRecord::Base
   end
 
   def text_before
+    return [] if self.previous_version == nil
     self.previous_version.all_previous_text
   end
 
   def objects_before
+    return [] if self.previous_version == nil
     self.previous_version.all_previous_objects
   end
 

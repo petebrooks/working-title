@@ -5,9 +5,6 @@ class VersionsController < ApplicationController
     @versions = @project.versions
   end
 
-  def new
-  end
-
   def show
 
     @version = Version.find(params[:id])
