@@ -1,4 +1,17 @@
 WorkingTitle::Application.routes.draw do
+
+  resources :users, except: [:index]
+  resources :projects, except: [:destroy, :edit, :update] do
+    resources :versions, except: [:destroy, :edit, :update]
+  end
+  resources :categories, only: [:index, :show]
+  resources :votes, only: [:create]
+
+  resources :sessions, only: [:new, :create, :destroy]
+  match '/signup', to: 'users#new', via: 'get'
+  match '/signin', to: 'sessions#new', via: 'get'
+  match '/signout', to: 'sessions#destroy', via: 'delete'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
