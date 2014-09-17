@@ -14,5 +14,13 @@ class VersionsController < ApplicationController
   end
 
   def create
+    @project = Project.find(params[:project_id])
+    @version = @project.versions.create(version_params)
+  end
+
+  private
+
+  def version_params
+    params.require(:version).permit(:contribution, :insertion_index, :previous_version_id)
   end
 end

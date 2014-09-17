@@ -6,16 +6,21 @@ class Version < ActiveRecord::Base
   has_many :children, class_name: "Version", foreign_key: "previous_version_id"
 
   def text_before
-    self.previous_version.all_previous
+    self.previous_version.all_previous_text
   end
 
-  def text_all
-    text_before.join("\n") + contribution
+  def objects_before
+    self.previous_version.all_previous_objects
   end
 
-  def all_previous
+  def all_previous_text
     return [self.contribution] if self.previous_version == nil
-    self.previous_version.all_previous + [self.contribution]
+    self.previous_version.all_previous_text + [self.contribution]
+  end
+
+  def all_previous_objects
+    return [self] if self.previous_version == nil
+    self.previous_version.all_previous_objects + [self]
   end
 
 end
