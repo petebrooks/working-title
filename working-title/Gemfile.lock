@@ -113,12 +113,9 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
-<<<<<<< HEAD
     slop (3.4.7)
-=======
     shoulda-matchers (2.7.0)
       activesupport (>= 3.0.0)
->>>>>>> a6b4b2cfb4a263b4fec833b7b2100708f6274434
     sprockets (2.11.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
