@@ -8,6 +8,8 @@ class CreateVersions < ActiveRecord::Migration
       t.text :contribution
       t.integer :insertion_index
 
+      t.index :previous_version_id
+
       t.timestamps
     end
   end

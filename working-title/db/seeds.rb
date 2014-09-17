@@ -23,8 +23,11 @@ end
 Project.find_each do |project|
   contributor_id = project.initiator.id
   intial_version = Version.create!(insertion_index: -1, previous_version_id: nil, contributor_id: contributor_id, contribution: Faker::Lorem.sentence, project_id: project.id)
-  project.versions.create!(insertion_index: -1, previous_version_id: intial_version.id, contributor_id: rand(1..5), contribution: Faker::Lorem.sentence)
-  project.votes.create!(user_id: rand(1..5), positive: [true, false].sample)
+  10.times do
+    previous_id = project.versions.last.id
+    project.versions.create!(insertion_index: -1, previous_version_id: previous_id, contributor_id: rand(1..5), contribution: Faker::Lorem.sentence)
+    project.votes.create!(user_id: rand(1..5), positive: [true, false].sample)
+  end
 end
 
 Version.find_each do |version|
@@ -32,4 +35,3 @@ Version.find_each do |version|
     version.votes.create!(user_id: rand(1..5), positive: [true, false].sample)
   end
 end
-

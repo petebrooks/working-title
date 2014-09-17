@@ -45,6 +45,8 @@ ActiveRecord::Schema.define(version: 20140917151036) do
     t.datetime "updated_at"
   end
 
+  add_index "versions", ["previous_version_id"], name: "index_versions_on_previous_version_id"
+
   create_table "votes", force: true do |t|
     t.integer  "user_id"
     t.integer  "voteable_id"
