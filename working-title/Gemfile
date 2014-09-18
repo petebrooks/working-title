@@ -31,7 +31,7 @@ group :test, :development do
   gem 'faker'
   gem 'pry'
   gem 'rspec-rails', '~> 3.0.0'
-  gem 'shoulda-matchers', require: false
+  gem 'shoulda-matchers'
 end
 
 group :doc do
