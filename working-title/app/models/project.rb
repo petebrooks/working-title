@@ -1,8 +1,15 @@
 class Project < ActiveRecord::Base
+  attr_accessor :initial_text
+
   belongs_to :category
   belongs_to :initiator, class_name: "User"
   has_many :votes, as: :voteable
   has_many :versions
+
+  validates :initiator, presence: true
+  validate :validate_initial_text
+
+  after_create :create_initial_version
 
   def get_popular_version
     max_score = self.versions.map(&:calculate_branch_vote_score).max
@@ -24,6 +31,14 @@ class Project < ActiveRecord::Base
 
   def calculate_vote_score
     self.votes.where(positive: true).count - self.votes.where(positive: false).count
+  end
+
+  def validate_initial_text
+    errors.add(:initial_text, "can't be blank") unless @initial_text
+  end
+
+  def create_initial_version
+    self.versions.create!(contribution: @initial_text, contributor: self.initiator, insertion_index: 0)
   end
 
 end

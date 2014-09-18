@@ -10,17 +10,21 @@ class ProjectsController < ApplicationController
 
   def create
     @project = current_user.projects.create(project_params)
-    @project.versions.create!(contributor: @project.initiator, contribution: params[:initial_text], insertion_index: -1)
+    # Replaced with database callback and validations:
+    # @project.versions.create!(contributor: @project.initiator, contribution: params[:initial_text], insertion_index: -1)
     redirect_to project_version_path(@project, @project.versions.first)
   end
 
   def show
     @project = Project.find(params[:id])
+    @popular_version = @project.get_popular_version
     @vote = Vote.new
+    # Should add error page and validations to prevent projects w/o initial versions
+    redirect_to project_version_path(@project, @popular_version) unless @popular_version == nil
   end
 
   private
   def project_params
-    params.require(:project).permit(:name, :category_id)
+    params.require(:project).permit(:name, :category_id, :initial_text)
   end
 end
