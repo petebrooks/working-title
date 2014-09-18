@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.2'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'pg', group: :production
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -28,18 +28,18 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 1.2'
 
 group :test, :development do
-  gem 'faker'
-
-  gem 'pry'
-  gem 'rspec-rails', '~> 3.0.0'
-  gem 'shoulda-matchers', require: false
-  gem 'capybara', '~> 2.2.1'
-  gem 'database_cleaner', '~> 1.2.0'
+	gem 'faker'
+	gem 'sqlite3'
+	gem 'pry'
+	gem 'rspec-rails', '~> 3.0.0'
+	gem 'shoulda-matchers', require: false
+	gem 'capybara', '~> 2.2.1'
+	gem 'database_cleaner', '~> 1.2.0'
 end
 
 group :doc do
-  # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', require: false
+	# bundle exec rake doc:rails generates the API under doc/api.
+	gem 'sdoc', require: false
 end
 
 # Use ActiveModel has_secure_password
@@ -53,3 +53,4 @@ gem 'bcrypt-ruby', '~> 3.1.2'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+ruby '2.0.0'
