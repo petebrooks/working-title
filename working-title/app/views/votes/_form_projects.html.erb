@@ -1,0 +1,15 @@
+<%= form_for @vote, html: {id: "upvote"} do |f| %>
+  <%= f.hidden_field :voteable_id, :value => "#{@project.id}" %>
+  <%= f.hidden_field :voteable_type, :value => "Project" %>
+  <%= f.hidden_field :positive, :value => true %>
+  <%= f.submit "Upvote" %>
+<% end %>
+
+<div class="score"><%= @project.calculate_vote_score %></div>
+
+<%= form_for @vote, html: {id: "downvote"} do |f| %>
+  <%= f.hidden_field :voteable_id, :value => "#{@project.id}" %>
+  <%= f.hidden_field :voteable_type, :value => "Project" %>
+  <%= f.hidden_field :positive, :value => false %>
+  <%= f.submit "Downvote" %>
+<% end %>
