@@ -1,11 +1,27 @@
 <div class = "container">
   <h2><%= @version.project.name %></h2>
 
-      <%=  @version.ancestors_text.join(" ")%>
-      <% @version.children.each do |child| %>
-        <%= link_to "#{child.contribution}", project_version_path(child.project, child) %>
+
+  <% unless @version.previous_version == nil %>
+    <%= link_to "Back", project_version_path(@version.project, @version.previous_version) %>
+  <% end %>
+
+  <div id="branch_text">
+    <% if @version.project.category.name == "story" %>
+      <p><%=  @version.branch_text.join(" ")%></p>
+    <% else @version.project.category.name == "song" %>
+
+      <% @version.branch_text.each do |line| %>
+        <p><%= line %></p>
       <% end %>
+    <% end %>
+  </div>
 
     <%= render 'form' %>
+
+      <% @version.children.each do |child| %>
+        <p><%= link_to "#{child.contribution}", project_version_path(child.project, child) %></p>
+      <% end %>
+
     <%= render 'votes/form_versions' %>
 </div>
