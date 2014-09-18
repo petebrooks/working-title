@@ -20,7 +20,7 @@
     <%= render 'form' %>
 
       <% @version.children.each do |child| %>
-        <%= link_to "#{child.contribution}", project_version_path(child.project, child) %>
+        <p><%= link_to "#{child.contribution}", project_version_path(child.project, child) %></p>
       <% end %>
 
     <%= render 'votes/form_versions' %>
