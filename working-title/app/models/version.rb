@@ -33,4 +33,12 @@ class Version < ActiveRecord::Base
     self.previous_version.all_previous_objects + [self]
   end
 
+  def calculate_branch_vote_score
+    all_previous_objects.map(&:calculate_version_vote_score).reduce(:+)
+  end
+
+  def calculate_version_vote_score
+    self.votes.where(positive: true).count - self.votes.where(positive: false).count
+  end
+
 end
