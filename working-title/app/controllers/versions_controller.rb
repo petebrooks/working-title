@@ -16,7 +16,7 @@ class VersionsController < ApplicationController
 
   def create
     @version = Version.create(version_params)
-    redirect_to version_path(@version)
+    redirect_to project_version_path(@version.project, @version)
   end
 
   private

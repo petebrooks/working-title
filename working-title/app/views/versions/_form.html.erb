@@ -1,6 +1,6 @@
 <%= form_tag project_versions_path(@version.project) do%>
-  <%= text_field_tag :contribution %>
-  <%= hidden_field_tag :previous_version_id %>
-  <%= hidden_field_tag :insertion_index %>
-  <%= submit_tag %>
+  <%= text_field_tag 'version[contribution]' %>
+  <%= hidden_field_tag 'version[previous_version_id]', @version.id %>
+  <%= hidden_field_tag 'version[insertion_index]', -1 %>
+  <%= submit_tag "Add" %>
 <% end %>
