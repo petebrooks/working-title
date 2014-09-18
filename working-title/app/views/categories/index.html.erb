@@ -1,0 +1,5 @@
+<div class="container">
+  <% @categories.each do |cat| %>
+    <p> <%= link_to "#{cat.name}", category_path(cat) %> </p>
+  <% end %>
+</div>
