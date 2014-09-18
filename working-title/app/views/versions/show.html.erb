@@ -1,0 +1,9 @@
+<div class = "container">
+  <h2><%= @version.project.name %></h2>
+
+      <%  @version.objects_before.each do |version| %>
+        <%= link_to "#{version.contribution}", project_version_path(version.project, version) %><br>
+      <% end %>
+
+  <p class="New_Contribution"><%=  @version.contribution%></p>
+</div>

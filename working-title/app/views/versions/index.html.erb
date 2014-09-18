@@ -1,0 +1,16 @@
+<div class ="container">
+  <%= @project.name %>
+  <ul>
+    <% @versions.each do |version| %>
+
+      <li>
+          <%=  link_to "#{version.contribution}", project_version_path(version.project, version)  %><br>
+          <strong>Contributor Name:</strong> <%= version.contributor.name %><br>
+          <%= version.insertion_index %><br>
+          <%= version.created_at.to_s(:long) %><br><br>
+
+      </li>
+
+    <% end %>
+  </ul>
+</div>
