@@ -9,9 +9,9 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    @user = User.first
-    @project = @user.projects.create(project_params)
-    redirect_to project_path(@project)
+    @project = current_user.projects.create(project_params)
+    @project.versions.create!(contributor: @project.initiator, contribution: params[:initial_text], insertion_index: -1)
+    redirect_to project_version_path(@project, @project.versions.first)
   end
 
   def show
