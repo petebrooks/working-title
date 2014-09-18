@@ -10,8 +10,3 @@ require "rails_helper"
 #   it { should validate_presence_of(:project) }
 # end
 
-describe Version do
-  it { should belong_to(:previous_version) }
-  it { should belong_to(:contributor) }
-  it { should validate_presence_of(:project) }
-end

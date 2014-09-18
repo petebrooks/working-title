@@ -14,23 +14,20 @@ class Version < ActiveRecord::Base
   end
 
   def ancestors_text
-    return [] if self.previous_version == nil
-    self.previous_version.branch_text
+    self.ancestors.map(&:contribution)
   end
 
   def ancestors
     return [] if self.previous_version == nil
-    self.previous_version.branch
+    self.previous_version.ancestors + [self.previous_version]
   end
 
   def branch_text
-    return [self.contribution] if self.previous_version == nil
-    self.previous_version.branch_text + [self.contribution]
+    self.branch.map(&:contribution)
   end
 
   def branch
-    return [self] if self.previous_version == nil
-    self.previous_version.branch + [self]
+    self.ancestors << self
   end
 
   def calculate_branch_vote_score
