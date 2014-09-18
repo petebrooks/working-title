@@ -29,9 +29,12 @@ gem 'jbuilder', '~> 1.2'
 
 group :test, :development do
   gem 'faker'
+
   gem 'pry'
   gem 'rspec-rails', '~> 3.0.0'
   gem 'shoulda-matchers', require: false
+  gem 'capybara', '~> 2.2.1'
+  gem 'database_cleaner', '~> 1.2.0'
 end
 
 group :doc do
