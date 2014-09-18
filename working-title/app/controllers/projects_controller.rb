@@ -16,6 +16,7 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.find(params[:id])
+    @vote = Vote.new
   end
 
   private
