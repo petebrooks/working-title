@@ -4,6 +4,7 @@
   <nav>
     <ul>
       <li><%= link_to "Home", root_path %></li>
+      <li><%= link_to "Projects", projects_path %></li>
       <% if current_user %>
         <li><%= link_to("Sign Out", signout_path, method: :delete)%></li>
         <li><%= link_to "Profile", user_path(current_user) %></li>

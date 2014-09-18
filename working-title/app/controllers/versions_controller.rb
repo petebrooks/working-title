@@ -7,7 +7,7 @@ class VersionsController < ApplicationController
 
   def show
     @version = Version.find(params[:id])
-
+    @vote = Vote.new
   end
 
   def new

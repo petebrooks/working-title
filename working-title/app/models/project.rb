@@ -22,4 +22,8 @@ class Project < ActiveRecord::Base
     nil
   end
 
+  def calculate_vote_score
+    self.votes.where(positive: true).count - self.votes.where(positive: false).count
+  end
+
 end
