@@ -42,8 +42,6 @@ RSpec.configure do |config|
   # The different available types are documented in the features, such as in
   # https://relishapp.com/rspec/rspec-rails/docs
   config.infer_spec_type_from_file_location!
-<<<<<<< HEAD
-=======
 
   config.include Capybara::DSL
 
@@ -65,6 +63,4 @@ RSpec.configure do |config|
   config.after(:each) do
     DatabaseCleaner.clean
   end
-
->>>>>>> master
 end

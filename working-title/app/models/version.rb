@@ -13,28 +13,28 @@ class Version < ActiveRecord::Base
     self.project ||= self.previous_version.project
   end
 
-  def text_before
+  def ancestors_text
     return [] if self.previous_version == nil
-    self.previous_version.all_previous_text
+    self.previous_version.branch_text
   end
 
-  def objects_before
+  def ancestors
     return [] if self.previous_version == nil
-    self.previous_version.all_previous_objects
+    self.previous_version.branch
   end
 
-  def all_previous_text
+  def branch_text
     return [self.contribution] if self.previous_version == nil
-    self.previous_version.all_previous_text + [self.contribution]
+    self.previous_version.branch_text + [self.contribution]
   end
 
-  def all_previous_objects
+  def branch
     return [self] if self.previous_version == nil
-    self.previous_version.all_previous_objects + [self]
+    self.previous_version.branch + [self]
   end
 
   def calculate_branch_vote_score
-    all_previous_objects.map(&:calculate_version_vote_score).reduce(:+)
+    branch.map(&:calculate_version_vote_score).reduce(:+)
   end
 
   def calculate_version_vote_score
