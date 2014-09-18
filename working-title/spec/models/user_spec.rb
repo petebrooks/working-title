@@ -20,11 +20,17 @@ describe User do
   end
 
   describe '#votes' do
-    it 'should give an active record assocation of version instances' do
+    it 'should give an active record assocation of votes instances' do
       name = Faker::Name.name
       user = User.create!(name: name, email: Faker::Internet.email(name), password: "password", password_confirmation: "password")
       Vote.create!(user_id: user.id, positive: [true, false].sample)
       expect(user.votes.all? { |vote| vote.class == Vote }).to eq(true)
     end
+  end
+
+  it 'has a secure password' do
+     name = Faker::Name.name
+    user = User.create!(name: name, email: Faker::Internet.email(name), password: "password", password_confirmation: "password")
+    expect(user).to have_secure_password
   end
 end

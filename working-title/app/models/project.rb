@@ -11,12 +11,12 @@ class Project < ActiveRecord::Base
     if max_array.length == 1
       return max_array.first
     else
-      max_children = max_array.map { |version| version.children.length }.max
-      children_array = max_array.select {|version| version.children.length == max_children }
-      if children_array.length == 1
-        return children_array.first
+      max_ancestors = max_array.map { |version| version.ancestors.length }.max
+      ancestors_array = max_array.select {|version| version.ancestors.length == max_ancestors }
+      if ancestors_array.length == 1
+        return ancestors_array.first
       else
-        return children_array.max_by { |version| version.created_at }
+        return ancestors_array.max_by { |version| version.created_at }
       end
     end
     nil

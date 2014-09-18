@@ -1,7 +1,7 @@
 <div class = "container">
   <h2><%= @version.project.name %></h2>
 
-      <%=  @version.all_previous_text.join(" ")%>
+      <%=  @version.ancestors_text.join(" ")%>
       <% @version.children.each do |child| %>
         <%= link_to "#{child.contribution}", project_version_path(child.project, child) %>
       <% end %>
