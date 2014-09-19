@@ -4,4 +4,8 @@ class User < ActiveRecord::Base
   has_many :votes, foreign_key: "user_id"
 
   has_secure_password
+
+  def unique_projects
+    self.versions.map(&:project).uniq
+  end
 end

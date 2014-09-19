@@ -4,11 +4,21 @@
 <% if current_user == @user %>
   <%= link_to "Edit Profile", edit_user_path(@user) %>
   <%= link_to("Delete Account", user_path(@user), method: :delete) %>
+  <%= link_to "Create Project", new_project_path %>
 
   <h3>Your Projects:</h3>
-  <% @user.projects.each do |project| %>
-  <p><%= link_to "#{project.name}", project_path(project) %></p>
+    <% @user.projects.each do |project| %>
+    <p><%= link_to "#{project.name}", project_path(project) %></p>
   <% end %>
+
+  <h3>Projects You Contributed To</h3>
+    <% @user.unique_projects.each do |project| %>
+      <p><%= link_to "#{project.name}", project_path(project) %></p>
+          <strong>Versions:</strong>
+          <% project.versions_by(@user).each do |version| %>
+            <li><%= link_to "#{version.contribution}", project_version_path(project, version) %></li>
+            <% end %>
+    <% end %>
 <% end %>
 
 

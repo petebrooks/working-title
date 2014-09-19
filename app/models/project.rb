@@ -33,6 +33,10 @@ class Project < ActiveRecord::Base
     self.votes.where(positive: true).count - self.votes.where(positive: false).count
   end
 
+  def versions_by(user)
+    self.versions.where(contributor: user)
+  end
+
   def validate_initial_text
     errors.add(:initial_text, "can't be blank") unless @initial_text
   end
