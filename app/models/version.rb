@@ -9,6 +9,12 @@ class Version < ActiveRecord::Base
 
   validates :project, presence: true
 
+  after_create :create_vote
+
+  def create_vote
+    self.vote.create(user: self.contributor, positive: true)
+  end
+
   def check_project
     self.project ||= self.previous_version.project
   end
