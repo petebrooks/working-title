@@ -33,8 +33,8 @@ class Project < ActiveRecord::Base
     self.votes.where(positive: true).count - self.votes.where(positive: false).count
   end
 
-  def versions_by(user_id)
-    self.versions.where(contributor_id: user_id)
+  def versions_by(user)
+    self.versions.where(contributor: user)
   end
 
   def validate_initial_text

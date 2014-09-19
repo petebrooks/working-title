@@ -12,9 +12,13 @@
   <% end %>
 
   <h3>Projects You Contributed To</h3>
-    <% @user.contribution_list.each do |project| %>
-    <p><%= link_to "#{project.name}", project_path(project) %></p>
-  <% end %>
+    <% @user.unique_projects.each do |project| %>
+      <p><%= link_to "#{project.name}", project_path(project) %></p>
+          <strong>Versions:</strong>
+          <% project.versions_by(@user).each do |version| %>
+            <li><%= link_to "#{version.contribution}", project_version_path(project, version) %></li>
+            <% end %>
+    <% end %>
 <% end %>
 
 

@@ -7459,3 +7459,1390 @@ Processing by VotesController#create as */*
   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 47], ["voteable_type", "Version"]]
   [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 47], ["voteable_type", "Version"]]
 Completed 200 OK in 16ms (Views: 0.1ms | ActiveRecord: 4.3ms)
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects" ORDER BY "projects"."id" ASC LIMIT 1[0m
+  [1m[35mVersion Load (2.8ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."project_id" = ? AND "versions"."contributor_id" = 3  [["project_id", 1]]
+  [1m[36mProject Load (0.4ms)[0m  [1mSELECT "projects".* FROM "projects" ORDER BY "projects"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mVersion Load (0.3ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."project_id" = ? AND "versions"."contributor_id" = 1[0m  [["project_id", 1]]
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-09-19 17:56:15 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."initiator_id" = ?  [["initiator_id", 1]]
+  [1m[36mVersion Load (0.3ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."contributor_id" = ?[0m  [["contributor_id", 1]]
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 9]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35mProject Load (0.5ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 11]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 12]]
+  Rendered users/show.html.erb within layouts/application (90.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.7ms)
+Completed 200 OK in 109ms (Views: 95.0ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:56:15 -0500
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-09-19 17:56:15 -0500
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-09-19 17:56:15 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-09-19 17:56:15 -0500
+
+
+Started GET "/assets/versions.css?body=1" for 127.0.0.1 at 2014-09-19 17:56:15 -0500
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2014-09-19 17:56:15 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-19 17:56:15 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:15 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:15 -0500
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:15 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:15 -0500
+
+
+Started GET "/assets/versions.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:15 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:15 -0500
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:15 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:56:15 -0500
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-09-19 17:57:20 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."initiator_id" = ?[0m  [["initiator_id", 1]]
+  [1m[35mVersion Load (0.2ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."contributor_id" = ?  [["contributor_id", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 7]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 9]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 11]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 12]]
+  Rendered users/show.html.erb within layouts/application (24.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 32ms (Views: 29.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-09-19 17:57:20 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:57:20 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-19 17:57:20 -0500
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-09-19 17:57:20 -0500
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2014-09-19 17:57:20 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-09-19 17:57:20 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:57:20 -0500
+
+
+Started GET "/assets/versions.css?body=1" for 127.0.0.1 at 2014-09-19 17:57:20 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:57:20 -0500
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-09-19 17:57:20 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-09-19 17:57:20 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:57:20 -0500
+
+
+Started GET "/assets/versions.js?body=1" for 127.0.0.1 at 2014-09-19 17:57:20 -0500
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2014-09-19 17:57:20 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:57:20 -0500
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-09-19 17:58:12 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+ERROR: compiling _app_views_users_show_html_erb__4245397794393737958_70291901121840 RAISED /Users/apprentice/working-title/app/views/users/show.html.erb:24: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/apprentice/working-title/app/views/users/show.html.erb:26: syntax error, unexpected end-of-input, expecting keyword_end
+Function body:           def _app_views_users_show_html_erb__4245397794393737958_70291901121840(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "users/show";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_append='<h3>';@output_buffer.append=( @user.name );@output_buffer.safe_append='</h3>
+<h3>';@output_buffer.append=( @user.email );@output_buffer.safe_append='</h3>
+
+'; if current_user == @user 
+@output_buffer.safe_append='  ';@output_buffer.append=( link_to "Edit Profile", edit_user_path(@user) );@output_buffer.safe_append='
+  ';@output_buffer.append=( link_to("Delete Account", user_path(@user), method: :delete) );@output_buffer.safe_append='
+  ';@output_buffer.append=( link_to "Create Project", new_project_path );@output_buffer.safe_append='
+
+  <h3>Your Projects:</h3>
+';     @user.projects.each do |project| 
+@output_buffer.safe_append='    <p>';@output_buffer.append=( link_to "#{project.name}", project_path(project) );@output_buffer.safe_append='</p>
+';   end 
+@output_buffer.safe_append='
+  <h3>Projects You Contributed To</h3>
+';     @user.unique_projects.each do |project| 
+@output_buffer.safe_append='      <p>';@output_buffer.append=( link_to "#{project.name}", project_path(project) );@output_buffer.safe_append='</p>
+';           project.versions_by(@user).each do |version| 
+@output_buffer.safe_append='            <li>';@output_buffer.append=( version );@output_buffer.safe_append='</li>
+';     end 
+ end 
+@output_buffer.safe_append='
+
+';@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_view/template.rb:299:in `module_eval'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_view/template.rb:299:in `compile'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_view/template.rb:248:in `block in compile!'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_view/template.rb:236:in `synchronize'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_view/template.rb:236:in `compile!'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_view/template.rb:142:in `block in render'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.2/lib/active_support/notifications.rb:161:in `instrument'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_view/template.rb:141:in `render'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.2/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.2/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.2/lib/active_support/notifications.rb:159:in `instrument'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_view/renderer/template_renderer.rb:17:in `render'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_view/renderer/renderer.rb:23:in `render'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/abstract_controller/rendering.rb:127:in `_render_template'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/abstract_controller/rendering.rb:97:in `render'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.2/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.2/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activerecord-4.0.2/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/abstract_controller/base.rb:189:in `process_action'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.2/lib/active_support/callbacks.rb:383:in `_run__4503864925552740475__process_action__callbacks'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.2/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.2/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.2/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.2/lib/active_support/notifications.rb:159:in `instrument'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activerecord-4.0.2/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/abstract_controller/base.rb:136:in `process'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/abstract_controller/rendering.rb:44:in `process'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_controller/metal.rb:195:in `dispatch'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_controller/metal.rb:231:in `block in action'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/routing/route_set.rb:80:in `call'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/routing/route_set.rb:48:in `call'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/journey/router.rb:71:in `block in call'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/journey/router.rb:59:in `each'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/journey/router.rb:59:in `call'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/routing/route_set.rb:680:in `call'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/flash.rb:241:in `call'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activerecord-4.0.2/lib/active_record/query_cache.rb:36:in `call'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activerecord-4.0.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activerecord-4.0.2/lib/active_record/migration.rb:369:in `call'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.2/lib/active_support/callbacks.rb:373:in `_run__492823216547805792__call__callbacks'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.2/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/railties-4.0.2/lib/rails/rack/logger.rb:38:in `call_app'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/railties-4.0.2/lib/rails/rack/logger.rb:20:in `block in call'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.2/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.2/lib/active_support/tagged_logging.rb:25:in `tagged'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.2/lib/active_support/tagged_logging.rb:67:in `tagged'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/railties-4.0.2/lib/rails/rack/logger.rb:20:in `call'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.2/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/static.rb:64:in `call'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/railties-4.0.2/lib/rails/engine.rb:511:in `call'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/railties-4.0.2/lib/rails/application.rb:97:in `call'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+/Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+  Rendered users/show.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (/Users/apprentice/working-title/app/views/users/show.html.erb:24: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/apprentice/working-title/app/views/users/show.html.erb:26: syntax error, unexpected end-of-input, expecting keyword_end):
+  actionpack (4.0.2) lib/action_view/template.rb:299:in `module_eval'
+  actionpack (4.0.2) lib/action_view/template.rb:299:in `compile'
+  actionpack (4.0.2) lib/action_view/template.rb:248:in `block in compile!'
+  actionpack (4.0.2) lib/action_view/template.rb:236:in `synchronize'
+  actionpack (4.0.2) lib/action_view/template.rb:236:in `compile!'
+  actionpack (4.0.2) lib/action_view/template.rb:142:in `block in render'
+  activesupport (4.0.2) lib/active_support/notifications.rb:161:in `instrument'
+  actionpack (4.0.2) lib/action_view/template.rb:141:in `render'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+  actionpack (4.0.2) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.2) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:383:in `_run__4503864925552740475__process_action__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.2) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.2) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__492823216547805792__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.7ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-09-19 17:58:23 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."initiator_id" = ?[0m  [["initiator_id", 1]]
+  [1m[35mVersion Load (0.3ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."contributor_id" = ?  [["contributor_id", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 7]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 9]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 11]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 12]]
+  [1m[35mVersion Load (0.3ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."project_id" = ? AND "versions"."contributor_id" = 1  [["project_id", 1]]
+  [1m[36mVersion Load (0.2ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."project_id" = ? AND "versions"."contributor_id" = 1[0m  [["project_id", 3]]
+  [1m[35mVersion Load (0.1ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."project_id" = ? AND "versions"."contributor_id" = 1  [["project_id", 4]]
+  [1m[36mVersion Load (0.1ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."project_id" = ? AND "versions"."contributor_id" = 1[0m  [["project_id", 5]]
+  [1m[35mVersion Load (0.2ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."project_id" = ? AND "versions"."contributor_id" = 1  [["project_id", 6]]
+  [1m[36mVersion Load (0.1ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."project_id" = ? AND "versions"."contributor_id" = 1[0m  [["project_id", 7]]
+  [1m[35mVersion Load (0.1ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."project_id" = ? AND "versions"."contributor_id" = 1  [["project_id", 9]]
+  [1m[36mVersion Load (0.1ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."project_id" = ? AND "versions"."contributor_id" = 1[0m  [["project_id", 10]]
+  [1m[35mVersion Load (0.1ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."project_id" = ? AND "versions"."contributor_id" = 1  [["project_id", 11]]
+  [1m[36mVersion Load (0.1ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."project_id" = ? AND "versions"."contributor_id" = 1[0m  [["project_id", 12]]
+  Rendered users/show.html.erb within layouts/application (70.5ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 79ms (Views: 74.5ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-09-19 17:58:23 -0500
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-09-19 17:58:23 -0500
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2014-09-19 17:58:23 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-09-19 17:58:23 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:58:23 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:58:23 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-19 17:58:23 -0500
+
+
+Started GET "/assets/versions.css?body=1" for 127.0.0.1 at 2014-09-19 17:58:23 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:58:23 -0500
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-09-19 17:58:23 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-09-19 17:58:23 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:58:23 -0500
+
+
+Started GET "/assets/versions.js?body=1" for 127.0.0.1 at 2014-09-19 17:58:23 -0500
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2014-09-19 17:58:23 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:58:23 -0500
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-09-19 17:59:21 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."initiator_id" = ?  [["initiator_id", 1]]
+  [1m[36mVersion Load (0.2ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."contributor_id" = ?[0m  [["contributor_id", 1]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 9]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 11]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 12]]
+  [1m[36mVersion Load (0.1ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."project_id" = ? AND "versions"."contributor_id" = 1[0m  [["project_id", 1]]
+  [1m[35mVersion Load (0.1ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."project_id" = ? AND "versions"."contributor_id" = 1  [["project_id", 3]]
+  [1m[36mVersion Load (0.1ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."project_id" = ? AND "versions"."contributor_id" = 1[0m  [["project_id", 4]]
+  [1m[35mVersion Load (0.1ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."project_id" = ? AND "versions"."contributor_id" = 1  [["project_id", 5]]
+  [1m[36mVersion Load (0.1ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."project_id" = ? AND "versions"."contributor_id" = 1[0m  [["project_id", 6]]
+  [1m[35mVersion Load (0.1ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."project_id" = ? AND "versions"."contributor_id" = 1  [["project_id", 7]]
+  [1m[36mVersion Load (0.1ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."project_id" = ? AND "versions"."contributor_id" = 1[0m  [["project_id", 9]]
+  [1m[35mVersion Load (0.1ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."project_id" = ? AND "versions"."contributor_id" = 1  [["project_id", 10]]
+  [1m[36mVersion Load (0.1ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."project_id" = ? AND "versions"."contributor_id" = 1[0m  [["project_id", 11]]
+  [1m[35mVersion Load (0.1ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."project_id" = ? AND "versions"."contributor_id" = 1  [["project_id", 12]]
+  Rendered users/show.html.erb within layouts/application (26.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 35ms (Views: 31.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-09-19 17:59:21 -0500
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-09-19 17:59:21 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-09-19 17:59:21 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:59:21 -0500
+
+
+Started GET "/assets/versions.css?body=1" for 127.0.0.1 at 2014-09-19 17:59:21 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:59:21 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-19 17:59:21 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:59:21 -0500
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2014-09-19 17:59:21 -0500
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-09-19 17:59:21 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-09-19 17:59:21 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:59:21 -0500
+
+
+Started GET "/assets/versions.js?body=1" for 127.0.0.1 at 2014-09-19 17:59:21 -0500
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2014-09-19 17:59:21 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:59:21 -0500
+
+
+Started GET "/projects/3" for 127.0.0.1 at 2014-09-19 17:59:26 -0500
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  [1m[35mVersion Load (0.2ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."project_id" = ?  [["project_id", 3]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'[0m  [["voteable_id", 3], ["voteable_type", "Version"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'  [["voteable_id", 3], ["voteable_type", "Version"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'[0m  [["voteable_id", 34], ["voteable_type", "Version"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'  [["voteable_id", 34], ["voteable_type", "Version"]]
+  [1m[36mVersion Load (0.2ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1[0m  [["id", 34]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 34], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 34], ["voteable_type", "Version"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 35], ["voteable_type", "Version"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 35], ["voteable_type", "Version"]]
+  [1m[35mVersion Load (0.1ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1  [["id", 35]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1[0m  [["id", 34]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 34], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 34], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 35], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 35], ["voteable_type", "Version"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 36], ["voteable_type", "Version"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 36], ["voteable_type", "Version"]]
+  [1m[35mVersion Load (0.1ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1  [["id", 36]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1[0m  [["id", 35]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1  [["id", 34]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'[0m  [["voteable_id", 34], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'  [["voteable_id", 34], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'[0m  [["voteable_id", 35], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'  [["voteable_id", 35], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'[0m  [["voteable_id", 36], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'  [["voteable_id", 36], ["voteable_type", "Version"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'[0m  [["voteable_id", 37], ["voteable_type", "Version"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'  [["voteable_id", 37], ["voteable_type", "Version"]]
+  [1m[36mVersion Load (0.1ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1[0m  [["id", 37]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1  [["id", 36]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1[0m  [["id", 35]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1  [["id", 34]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'[0m  [["voteable_id", 34], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'  [["voteable_id", 34], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'[0m  [["voteable_id", 35], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'  [["voteable_id", 35], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'[0m  [["voteable_id", 36], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'  [["voteable_id", 36], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'[0m  [["voteable_id", 37], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'  [["voteable_id", 37], ["voteable_type", "Version"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'[0m  [["voteable_id", 38], ["voteable_type", "Version"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'  [["voteable_id", 38], ["voteable_type", "Version"]]
+  [1m[36mVersion Load (0.2ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1[0m  [["id", 38]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1  [["id", 37]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1[0m  [["id", 36]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1  [["id", 35]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1[0m  [["id", 34]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 34], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 34], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 35], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 35], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 36], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 36], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 37], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 37], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 38], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 38], ["voteable_type", "Version"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 39], ["voteable_type", "Version"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 39], ["voteable_type", "Version"]]
+  [1m[35mVersion Load (0.1ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1  [["id", 39]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1[0m  [["id", 38]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1  [["id", 37]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1[0m  [["id", 36]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1  [["id", 35]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1[0m  [["id", 34]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 34], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 34], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 35], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 35], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 36], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 36], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 37], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 37], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 38], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 38], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 39], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 39], ["voteable_type", "Version"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 40], ["voteable_type", "Version"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 40], ["voteable_type", "Version"]]
+  [1m[35mVersion Load (0.1ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1  [["id", 40]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1[0m  [["id", 39]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1  [["id", 38]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1[0m  [["id", 37]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1  [["id", 36]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1[0m  [["id", 35]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1  [["id", 34]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'[0m  [["voteable_id", 34], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'  [["voteable_id", 34], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'[0m  [["voteable_id", 35], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'  [["voteable_id", 35], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'[0m  [["voteable_id", 36], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'  [["voteable_id", 36], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'[0m  [["voteable_id", 37], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'  [["voteable_id", 37], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'[0m  [["voteable_id", 38], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'  [["voteable_id", 38], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'[0m  [["voteable_id", 39], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'  [["voteable_id", 39], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'[0m  [["voteable_id", 40], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'  [["voteable_id", 40], ["voteable_type", "Version"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'[0m  [["voteable_id", 41], ["voteable_type", "Version"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'  [["voteable_id", 41], ["voteable_type", "Version"]]
+  [1m[36mVersion Load (0.1ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1[0m  [["id", 41]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1  [["id", 40]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1[0m  [["id", 39]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1  [["id", 38]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1[0m  [["id", 37]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1  [["id", 36]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1[0m  [["id", 35]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1  [["id", 34]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'[0m  [["voteable_id", 34], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'  [["voteable_id", 34], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'[0m  [["voteable_id", 35], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'  [["voteable_id", 35], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'[0m  [["voteable_id", 36], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'  [["voteable_id", 36], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'[0m  [["voteable_id", 37], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'  [["voteable_id", 37], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'[0m  [["voteable_id", 38], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'  [["voteable_id", 38], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'[0m  [["voteable_id", 39], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'  [["voteable_id", 39], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'[0m  [["voteable_id", 40], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'  [["voteable_id", 40], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'[0m  [["voteable_id", 41], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'  [["voteable_id", 41], ["voteable_type", "Version"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'[0m  [["voteable_id", 42], ["voteable_type", "Version"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'  [["voteable_id", 42], ["voteable_type", "Version"]]
+  [1m[36mVersion Load (0.2ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1[0m  [["id", 42]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1  [["id", 41]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1[0m  [["id", 40]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1  [["id", 39]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1[0m  [["id", 38]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1  [["id", 37]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1[0m  [["id", 36]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1  [["id", 35]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1[0m  [["id", 34]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 34], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 34], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 35], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 35], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 36], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 36], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 37], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 37], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 38], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 38], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 39], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 39], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 40], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 40], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 41], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 41], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 42], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 42], ["voteable_type", "Version"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 43], ["voteable_type", "Version"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 43], ["voteable_type", "Version"]]
+  [1m[35mVersion Load (0.1ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1  [["id", 43]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1[0m  [["id", 42]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1  [["id", 41]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1[0m  [["id", 40]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1  [["id", 39]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1[0m  [["id", 38]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1  [["id", 37]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1[0m  [["id", 36]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1  [["id", 35]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1[0m  [["id", 34]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 34], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 34], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 35], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 35], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 36], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 36], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 37], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 37], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 38], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 38], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 39], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 39], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 40], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 40], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 41], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 41], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 42], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 42], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 43], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 43], ["voteable_type", "Version"]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 44], ["voteable_type", "Version"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 44], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 3], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 3], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 34], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 34], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 34], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 34], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 35], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 35], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 34], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 34], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 35], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 35], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 36], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 36], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 34], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 34], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 35], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 35], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 36], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 36], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 37], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 37], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 34], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 34], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 35], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 35], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 36], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 36], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 37], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 37], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 38], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 38], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 34], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 34], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 35], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 35], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 36], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 36], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 37], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 37], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 38], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 38], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 39], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 39], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 34], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 34], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 35], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 35], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 36], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 36], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 37], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 37], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 38], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 38], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 39], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 39], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 40], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 40], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 34], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 34], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 35], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 35], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 36], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 36], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 37], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 37], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 38], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 38], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 39], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 39], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 40], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 40], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 41], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 41], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 34], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 34], ["voteable_type", "Version"]]
+  [1m[35mCACHE (44.9ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 35], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 35], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 36], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 36], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 37], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 37], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 38], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 38], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 39], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 39], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 40], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 40], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 41], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 41], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 42], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 42], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 34], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 34], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 35], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 35], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 36], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 36], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 37], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 37], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 38], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 38], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 39], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 39], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 40], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 40], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 41], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 41], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 42], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 42], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 43], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 43], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 34], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 34], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 35], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 35], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 36], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 36], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 37], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 37], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 38], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 38], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 39], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 39], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 40], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 40], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 41], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 41], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 42], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 42], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 43], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 43], ["voteable_type", "Version"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 44], ["voteable_type", "Version"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 44], ["voteable_type", "Version"]]
+Redirected to http://localhost:3000/projects/3/versions/39
+Completed 302 Found in 262ms (ActiveRecord: 55.4ms)
+
+
+Started GET "/projects/3/versions/39" for 127.0.0.1 at 2014-09-19 17:59:26 -0500
+Processing by VersionsController#show as HTML
+  Parameters: {"project_id"=>"3", "id"=>"39"}
+  [1m[35mVersion Load (0.2ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."id" = ? LIMIT 1  [["id", "39"]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mVersion Load (0.1ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1  [["id", 38]]
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? ORDER BY "categories"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mVersion Load (0.1ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1  [["id", 37]]
+  [1m[36mVersion Load (0.1ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1[0m  [["id", 36]]
+  [1m[35mVersion Load (0.1ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1  [["id", 35]]
+  [1m[36mVersion Load (0.1ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1[0m  [["id", 34]]
+  Rendered versions/_form.html.erb (1.0ms)
+  [1m[35mVersion Load (0.2ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."previous_version_id" = ?  [["previous_version_id", 39]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 34], ["voteable_type", "Version"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 34], ["voteable_type", "Version"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 35], ["voteable_type", "Version"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 35], ["voteable_type", "Version"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 36], ["voteable_type", "Version"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 36], ["voteable_type", "Version"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 37], ["voteable_type", "Version"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 37], ["voteable_type", "Version"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 38], ["voteable_type", "Version"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 38], ["voteable_type", "Version"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'  [["voteable_id", 39], ["voteable_type", "Version"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'[0m  [["voteable_id", 39], ["voteable_type", "Version"]]
+  Rendered votes/_form_versions.html.erb (16.7ms)
+  Rendered versions/show.html.erb within layouts/application (34.4ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.7ms)
+Completed 200 OK in 43ms (Views: 38.1ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-09-19 17:59:26 -0500
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-09-19 17:59:26 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-09-19 17:59:26 -0500
+
+
+Started GET "/assets/versions.css?body=1" for 127.0.0.1 at 2014-09-19 17:59:26 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-19 17:59:26 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:59:26 -0500
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2014-09-19 17:59:26 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:59:26 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:59:26 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-09-19 17:59:26 -0500
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-09-19 17:59:26 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:59:26 -0500
+
+
+Started GET "/assets/versions.js?body=1" for 127.0.0.1 at 2014-09-19 17:59:26 -0500
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2014-09-19 17:59:26 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:59:26 -0500
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-09-19 18:01:01 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."initiator_id" = ?  [["initiator_id", 1]]
+  [1m[36mVersion Load (0.2ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."contributor_id" = ?[0m  [["contributor_id", 1]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 9]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 11]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 12]]
+  [1m[36mVersion Load (0.1ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."project_id" = ? AND "versions"."contributor_id" = 1[0m  [["project_id", 1]]
+  [1m[35mVersion Load (0.1ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."project_id" = ? AND "versions"."contributor_id" = 1  [["project_id", 3]]
+  [1m[36mVersion Load (0.1ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."project_id" = ? AND "versions"."contributor_id" = 1[0m  [["project_id", 4]]
+  [1m[35mVersion Load (0.1ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."project_id" = ? AND "versions"."contributor_id" = 1  [["project_id", 5]]
+  [1m[36mVersion Load (0.1ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."project_id" = ? AND "versions"."contributor_id" = 1[0m  [["project_id", 6]]
+  [1m[35mVersion Load (0.1ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."project_id" = ? AND "versions"."contributor_id" = 1  [["project_id", 7]]
+  [1m[36mVersion Load (0.1ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."project_id" = ? AND "versions"."contributor_id" = 1[0m  [["project_id", 9]]
+  [1m[35mVersion Load (0.1ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."project_id" = ? AND "versions"."contributor_id" = 1  [["project_id", 10]]
+  [1m[36mVersion Load (0.1ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."project_id" = ? AND "versions"."contributor_id" = 1[0m  [["project_id", 11]]
+  [1m[35mVersion Load (0.1ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."project_id" = ? AND "versions"."contributor_id" = 1  [["project_id", 12]]
+  Rendered users/show.html.erb within layouts/application (26.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 34ms (Views: 31.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 18:01:01 -0500
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-09-19 18:01:01 -0500
+
+
+Started GET "/assets/versions.css?body=1" for 127.0.0.1 at 2014-09-19 18:01:01 -0500
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2014-09-19 18:01:01 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 18:01:01 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-19 18:01:01 -0500
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-09-19 18:01:01 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 18:01:01 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-09-19 18:01:01 -0500
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-09-19 18:01:01 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-09-19 18:01:01 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 18:01:01 -0500
+
+
+Started GET "/assets/versions.js?body=1" for 127.0.0.1 at 2014-09-19 18:01:01 -0500
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2014-09-19 18:01:01 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 18:01:01 -0500
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-09-19 18:01:19 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."initiator_id" = ?[0m  [["initiator_id", 1]]
+  [1m[35mVersion Load (0.2ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."contributor_id" = ?  [["contributor_id", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 7]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 9]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 11]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 12]]
+  [1m[35mVersion Load (0.1ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."project_id" = ? AND "versions"."contributor_id" = 1  [["project_id", 1]]
+  [1m[36mVersion Load (0.1ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."project_id" = ? AND "versions"."contributor_id" = 1[0m  [["project_id", 3]]
+  [1m[35mVersion Load (0.1ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."project_id" = ? AND "versions"."contributor_id" = 1  [["project_id", 4]]
+  [1m[36mVersion Load (0.1ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."project_id" = ? AND "versions"."contributor_id" = 1[0m  [["project_id", 5]]
+  [1m[35mVersion Load (0.1ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."project_id" = ? AND "versions"."contributor_id" = 1  [["project_id", 6]]
+  [1m[36mVersion Load (0.2ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."project_id" = ? AND "versions"."contributor_id" = 1[0m  [["project_id", 7]]
+  [1m[35mVersion Load (0.1ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."project_id" = ? AND "versions"."contributor_id" = 1  [["project_id", 9]]
+  [1m[36mVersion Load (0.2ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."project_id" = ? AND "versions"."contributor_id" = 1[0m  [["project_id", 10]]
+  [1m[35mVersion Load (0.1ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."project_id" = ? AND "versions"."contributor_id" = 1  [["project_id", 11]]
+  [1m[36mVersion Load (0.1ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."project_id" = ? AND "versions"."contributor_id" = 1[0m  [["project_id", 12]]
+  Rendered users/show.html.erb within layouts/application (61.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 70ms (Views: 66.2ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 18:01:19 -0500
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-09-19 18:01:19 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-09-19 18:01:20 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-19 18:01:20 -0500
+
+
+Started GET "/assets/versions.css?body=1" for 127.0.0.1 at 2014-09-19 18:01:20 -0500
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-09-19 18:01:20 -0500
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2014-09-19 18:01:20 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 18:01:20 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 18:01:20 -0500
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-09-19 18:01:20 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 18:01:20 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-09-19 18:01:20 -0500
+
+
+Started GET "/assets/versions.js?body=1" for 127.0.0.1 at 2014-09-19 18:01:20 -0500
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2014-09-19 18:01:20 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 18:01:20 -0500
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-09-19 18:03:22 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."initiator_id" = ?  [["initiator_id", 1]]
+  [1m[36mVersion Load (0.3ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."contributor_id" = ?[0m  [["contributor_id", 1]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 9]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 11]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 12]]
+  [1m[36mVersion Load (0.1ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."project_id" = ? AND "versions"."contributor_id" = 1[0m  [["project_id", 1]]
+  [1m[35mVersion Load (0.1ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."project_id" = ? AND "versions"."contributor_id" = 1  [["project_id", 3]]
+  [1m[36mVersion Load (0.1ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."project_id" = ? AND "versions"."contributor_id" = 1[0m  [["project_id", 4]]
+  [1m[35mVersion Load (0.1ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."project_id" = ? AND "versions"."contributor_id" = 1  [["project_id", 5]]
+  [1m[36mVersion Load (0.1ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."project_id" = ? AND "versions"."contributor_id" = 1[0m  [["project_id", 6]]
+  [1m[35mVersion Load (0.1ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."project_id" = ? AND "versions"."contributor_id" = 1  [["project_id", 7]]
+  [1m[36mVersion Load (0.1ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."project_id" = ? AND "versions"."contributor_id" = 1[0m  [["project_id", 9]]
+  [1m[35mVersion Load (0.1ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."project_id" = ? AND "versions"."contributor_id" = 1  [["project_id", 10]]
+  [1m[36mVersion Load (0.1ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."project_id" = ? AND "versions"."contributor_id" = 1[0m  [["project_id", 11]]
+  [1m[35mVersion Load (0.1ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."project_id" = ? AND "versions"."contributor_id" = 1  [["project_id", 12]]
+  Rendered users/show.html.erb within layouts/application (29.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 39ms (Views: 34.5ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-09-19 18:03:22 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-09-19 18:03:22 -0500
+
+
+Started GET "/assets/versions.css?body=1" for 127.0.0.1 at 2014-09-19 18:03:22 -0500
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-09-19 18:03:22 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-19 18:03:22 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 18:03:22 -0500
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2014-09-19 18:03:22 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 18:03:22 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 18:03:22 -0500
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-09-19 18:03:22 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-09-19 18:03:22 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 18:03:22 -0500
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2014-09-19 18:03:22 -0500
+
+
+Started GET "/assets/versions.js?body=1" for 127.0.0.1 at 2014-09-19 18:03:22 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 18:03:22 -0500
+
+
+Started GET "/projects/1/versions/13" for 127.0.0.1 at 2014-09-19 18:03:24 -0500
+Processing by VersionsController#show as HTML
+  Parameters: {"project_id"=>"1", "id"=>"13"}
+  [1m[36mVersion Load (0.1ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."id" = ? LIMIT 1[0m  [["id", "13"]]
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mVersion Load (0.1ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."id" = ? ORDER BY "versions"."id" ASC LIMIT 1[0m  [["id", 12]]
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = ? ORDER BY "categories"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered versions/_form.html.erb (0.8ms)
+  [1m[36mVersion Load (0.1ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."previous_version_id" = ?[0m  [["previous_version_id", 13]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'[0m  [["voteable_id", 12], ["voteable_type", "Version"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'  [["voteable_id", 12], ["voteable_type", "Version"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 't'[0m  [["voteable_id", 13], ["voteable_type", "Version"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."positive" = 'f'  [["voteable_id", 13], ["voteable_type", "Version"]]
+  Rendered votes/_form_versions.html.erb (5.0ms)
+  Rendered versions/show.html.erb within layouts/application (12.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 21ms (Views: 18.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-09-19 18:03:24 -0500
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-09-19 18:03:24 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-19 18:03:24 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 18:03:24 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-09-19 18:03:24 -0500
+
+
+Started GET "/assets/versions.css?body=1" for 127.0.0.1 at 2014-09-19 18:03:24 -0500
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2014-09-19 18:03:24 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 18:03:24 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 18:03:24 -0500
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-09-19 18:03:24 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-09-19 18:03:24 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 18:03:24 -0500
+
+
+Started GET "/assets/versions.js?body=1" for 127.0.0.1 at 2014-09-19 18:03:24 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 18:03:24 -0500
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2014-09-19 18:03:24 -0500
