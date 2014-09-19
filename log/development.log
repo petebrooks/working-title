@@ -1,12 +1,20 @@
 
 
+<<<<<<< HEAD
+Started GET "/" for 127.0.0.1 at 2014-09-19 07:51:56 -0500
+=======
 Started GET "/" for 127.0.0.1 at 2014-09-19 16:08:09 -0500
+>>>>>>> deab452fa0e66a308561b1fa375e630460005b80
 
 ActiveRecord::PendingMigrationError (Migrations are pending; run 'bin/rake db:migrate RAILS_ENV=development' to resolve this issue.):
   activerecord (4.0.2) lib/active_record/migration.rb:379:in `check_pending!'
   activerecord (4.0.2) lib/active_record/migration.rb:366:in `call'
   actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+<<<<<<< HEAD
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__3504365793205497169__call__callbacks'
+=======
   activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__492823216547805792__call__callbacks'
+>>>>>>> deab452fa0e66a308561b1fa375e630460005b80
   activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
   actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
   actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
@@ -36,6 +44,25 @@ ActiveRecord::PendingMigrationError (Migrations are pending; run 'bin/rake db:mi
   /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
 
 
+<<<<<<< HEAD
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.0ms)
+  [1m[36m (1.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (1.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20140917150606)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "password_digest" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140917150606"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Migrating to CreateProjects (20140917150833)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "category_id" integer, "initiator_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140917150833"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+=======
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
@@ -95,6 +122,7 @@ Migrating to CreateProjects (20140917150833)
   [1m[36m (0.3ms)[0m  [1mCREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "category_id" integer, "initiator_id" integer, "created_at" datetime, "updated_at" datetime) [0m
   [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140917150833"]]
   [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+>>>>>>> deab452fa0e66a308561b1fa375e630460005b80
 Migrating to CreateVersions (20140917150935)
   [1m[35m (0.1ms)[0m  begin transaction
   [1m[36m (0.3ms)[0m  [1mCREATE TABLE "versions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "project_id" integer, "contributor_id" integer, "previous_version_id" integer, "contribution" text, "insertion_index" integer, "created_at" datetime, "updated_at" datetime) [0m
@@ -103,6 +131,1854 @@ Migrating to CreateVersions (20140917150935)
   [1m[35m (1.2ms)[0m  commit transaction
 Migrating to CreateVotes (20140917151006)
   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+<<<<<<< HEAD
+  [1m[35m (0.4ms)[0m  CREATE TABLE "votes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "voteable_id" integer, "voteable_type" varchar(255), "positive" boolean, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20140917151006"]]
+  [1m[35m (1.8ms)[0m  commit transaction
+Migrating to CreateCategories (20140917151036)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20140917151036"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 07:52:30 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (2.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 7]]
+  Rendered welcome/index.html.erb within layouts/application (121.6ms)
+Completed 500 Internal Server Error in 124ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with id=7):
+  app/helpers/sessions_helper.rb:8:in `current_user'
+  app/views/welcome/index.html.erb:1:in `_app_views_welcome_index_html_erb___505793856121689290_70144464967560'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 07:52:44 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+Completed 200 OK in 883ms (Views: 882.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 07:52:44 -0500
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-09-19 07:52:44 -0500
+
+
+Started GET "/assets/versions.css?body=1" for 127.0.0.1 at 2014-09-19 07:52:44 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-19 07:52:44 -0500
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-09-19 07:52:44 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-09-19 07:52:44 -0500
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2014-09-19 07:52:44 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 07:52:44 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 07:52:45 -0500
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-09-19 07:52:45 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-09-19 07:52:45 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 07:52:45 -0500
+
+
+Started GET "/assets/versions.js?body=1" for 127.0.0.1 at 2014-09-19 07:52:45 -0500
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2014-09-19 07:52:45 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 07:52:45 -0500
+
+
+Started GET "/projects/1/versions/4" for 127.0.0.1 at 2014-09-19 07:53:08 -0500
+Processing by VersionsController#show as HTML
+  Parameters: {"project_id"=>"1", "id"=>"4"}
+  [1m[36mVersion Load (0.1ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."id" = ? LIMIT 1[0m  [["id", "4"]]
+Completed 404 Not Found in 111ms
+
+ActiveRecord::RecordNotFound (Couldn't find Version with id=4):
+  app/controllers/versions_controller.rb:9:in `show'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.8ms)
+
+
+Started GET "/projects/1" for 127.0.0.1 at 2014-09-19 07:53:19 -0500
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 404 Not Found in 6ms
+
+ActiveRecord::RecordNotFound (Couldn't find Project with id=1):
+  app/controllers/projects_controller.rb:19:in `show'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.5ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (78.3ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Fri, 19 Sep 2014 12:53:27 UTC +00:00], ["name", "Story"], ["updated_at", Fri, 19 Sep 2014 12:53:27 UTC +00:00]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Fri, 19 Sep 2014 12:53:27 UTC +00:00], ["name", "Song"], ["updated_at", Fri, 19 Sep 2014 12:53:27 UTC +00:00]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Fri, 19 Sep 2014 12:53:27 UTC +00:00], ["name", "Poem"], ["updated_at", Fri, 19 Sep 2014 12:53:27 UTC +00:00]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 19 Sep 2014 12:53:27 UTC +00:00], ["email", "iv.walker.fausto@murphy.net"], ["name", "Fausto Walker IV"], ["password_digest", "$2a$10$dx6UXl3Nb6dZ1oXahGIE0.EdMXzUBGnnumac5D33Ob4CdGLYlR3ly"], ["updated_at", Fri, 19 Sep 2014 12:53:27 UTC +00:00]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Fri, 19 Sep 2014 12:53:27 UTC +00:00], ["email", "emelia.murphy@bernier.info"], ["name", "Emelia Murphy"], ["password_digest", "$2a$10$VSShXzjKwfLupHrDKA30ve6Apy6SQzn.Pi1pCnVhd4OqXhu5ctIBS"], ["updated_at", Fri, 19 Sep 2014 12:53:27 UTC +00:00]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 19 Sep 2014 12:53:27 UTC +00:00], ["email", "ernestina.mrs.hamill@beer.name"], ["name", "Mrs. Ernestina Hamill"], ["password_digest", "$2a$10$gw6DYv91eulXHBV2LXFNJ.Iku7M6Gt6XRgy2w0HSjoT3FSnaRm.3C"], ["updated_at", Fri, 19 Sep 2014 12:53:27 UTC +00:00]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Fri, 19 Sep 2014 12:53:27 UTC +00:00], ["email", "v.volkman.jeremie@powlowskilehner.com"], ["name", "Jeremie Volkman V"], ["password_digest", "$2a$10$2JCoupLKmD7xozHdzZbRGuk06tvcmP5PYJ./UmKSGnVa1tIrwyY7y"], ["updated_at", Fri, 19 Sep 2014 12:53:27 UTC +00:00]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 19 Sep 2014 12:53:27 UTC +00:00], ["email", "satterfield_kory@beatty.name"], ["name", "Kory Satterfield"], ["password_digest", "$2a$10$dwflFxu1WBz/tLo.HTBN1.tSAjcTQq76u9TdVilHrv02hrE1jHksq"], ["updated_at", Fri, 19 Sep 2014 12:53:27 UTC +00:00]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT 1000
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+
+
+Started GET "/projects/1" for 127.0.0.1 at 2014-09-19 07:54:25 -0500
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Project with id=1):
+  app/controllers/projects_controller.rb:19:in `show'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2014-09-19 07:54:31 -0500
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 07:54:31 -0500
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-09-19 07:54:31 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-19 07:54:31 -0500
+
+
+Started GET "/assets/versions.css?body=1" for 127.0.0.1 at 2014-09-19 07:54:31 -0500
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-09-19 07:54:31 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-09-19 07:54:31 -0500
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2014-09-19 07:54:31 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 07:54:31 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 07:54:31 -0500
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-09-19 07:54:31 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-09-19 07:54:31 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 07:54:31 -0500
+
+
+Started GET "/assets/versions.js?body=1" for 127.0.0.1 at 2014-09-19 07:54:31 -0500
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2014-09-19 07:54:31 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 07:54:31 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:06:00 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (11.7ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 143ms (Views: 142.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:06:01 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 6ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-09-19 17:06:01 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:06:01 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-09-19 17:06:01 -0500
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-09-19 17:06:01 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-19 17:06:01 -0500
+
+
+Started GET "/assets/versions.css?body=1" for 127.0.0.1 at 2014-09-19 17:06:01 -0500
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2014-09-19 17:06:01 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:06:01 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:06:01 -0500
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-09-19 17:06:01 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-09-19 17:06:01 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:06:01 -0500
+
+
+Started GET "/assets/versions.js?body=1" for 127.0.0.1 at 2014-09-19 17:06:01 -0500
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2014-09-19 17:06:01 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:06:01 -0500
+
+
+Started GET "/projects" for 127.0.0.1 at 2014-09-19 17:06:03 -0500
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 17ms (Views: 7.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-09-19 17:06:03 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:06:03 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-19 17:06:03 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-09-19 17:06:03 -0500
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-09-19 17:06:03 -0500
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2014-09-19 17:06:03 -0500
+
+
+Started GET "/assets/versions.css?body=1" for 127.0.0.1 at 2014-09-19 17:06:03 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:06:03 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:06:03 -0500
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-09-19 17:06:03 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-09-19 17:06:03 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:06:03 -0500
+
+
+Started GET "/assets/versions.js?body=1" for 127.0.0.1 at 2014-09-19 17:06:03 -0500
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2014-09-19 17:06:03 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:06:03 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:06:06 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 7ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:06:06 -0500
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-09-19 17:06:06 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-19 17:06:06 -0500
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2014-09-19 17:06:06 -0500
+
+
+Started GET "/assets/versions.css?body=1" for 127.0.0.1 at 2014-09-19 17:06:06 -0500
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-09-19 17:06:06 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-09-19 17:06:06 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:06:06 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:06:06 -0500
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-09-19 17:06:06 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:06:06 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-09-19 17:06:06 -0500
+
+
+Started GET "/assets/versions.js?body=1" for 127.0.0.1 at 2014-09-19 17:06:06 -0500
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2014-09-19 17:06:06 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:06:06 -0500
+
+
+Started GET "/projects" for 127.0.0.1 at 2014-09-19 17:06:07 -0500
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-09-19 17:06:07 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:06:07 -0500
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-09-19 17:06:07 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-09-19 17:06:07 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-19 17:06:07 -0500
+
+
+Started GET "/assets/versions.css?body=1" for 127.0.0.1 at 2014-09-19 17:06:07 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:06:07 -0500
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2014-09-19 17:06:07 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:06:07 -0500
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-09-19 17:06:07 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-09-19 17:06:07 -0500
+
+
+Started GET "/assets/versions.js?body=1" for 127.0.0.1 at 2014-09-19 17:06:07 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:06:07 -0500
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2014-09-19 17:06:07 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:06:07 -0500
+
+
+Started GET "/projects" for 127.0.0.1 at 2014-09-19 17:06:23 -0500
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 50ms (Views: 49.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:06:23 -0500
+
+
+Started GET "/assets/versions.css?body=1" for 127.0.0.1 at 2014-09-19 17:06:23 -0500
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-09-19 17:06:23 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-09-19 17:06:23 -0500
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-09-19 17:06:23 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-19 17:06:23 -0500
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2014-09-19 17:06:23 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:06:23 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:06:23 -0500
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-09-19 17:06:23 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-09-19 17:06:23 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:06:23 -0500
+
+
+Started GET "/assets/versions.js?body=1" for 127.0.0.1 at 2014-09-19 17:06:23 -0500
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2014-09-19 17:06:23 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:06:23 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:06:29 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-09-19 17:06:29 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:06:29 -0500
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-09-19 17:06:29 -0500
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-09-19 17:06:29 -0500
+
+
+Started GET "/assets/versions.css?body=1" for 127.0.0.1 at 2014-09-19 17:06:29 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-19 17:06:29 -0500
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2014-09-19 17:06:29 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:06:29 -0500
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-09-19 17:06:29 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:06:29 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-09-19 17:06:29 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:06:29 -0500
+
+
+Started GET "/assets/versions.js?body=1" for 127.0.0.1 at 2014-09-19 17:06:29 -0500
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2014-09-19 17:06:29 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:06:29 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:07:11 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:07:11 -0500
+
+
+Started GET "/assets/versions.css?body=1" for 127.0.0.1 at 2014-09-19 17:07:11 -0500
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-09-19 17:07:11 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-09-19 17:07:11 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-19 17:07:11 -0500
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-09-19 17:07:11 -0500
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2014-09-19 17:07:11 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:07:11 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:07:11 -0500
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-09-19 17:07:11 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-09-19 17:07:11 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:07:11 -0500
+
+
+Started GET "/assets/versions.js?body=1" for 127.0.0.1 at 2014-09-19 17:07:11 -0500
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2014-09-19 17:07:11 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:07:11 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:08:42 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 74ms
+
+ActionView::Template::Error (Invalid CSS after "  border:": expected expression (e.g. 1px, bold), was "}"
+  (in /Users/apprentice/Desktop/working-title/app/assets/stylesheets/general.css.scss:29)):
+    2: <html>
+    3: <head>
+    4:   <title>WorkingTitle</title>
+    5:   <%= stylesheet_link_tag    "application", media: "all" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8: 
+  app/assets/stylesheets/general.css.scss:29
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___4337168653505738716_70107205375480'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:08:54 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 70ms (Views: 70.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:08:54 -0500
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-09-19 17:08:54 -0500
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-09-19 17:08:54 -0500
+
+
+Started GET "/assets/versions.css?body=1" for 127.0.0.1 at 2014-09-19 17:08:54 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-19 17:08:54 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-09-19 17:08:54 -0500
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2014-09-19 17:08:54 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:08:54 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:08:54 -0500
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-09-19 17:08:54 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-09-19 17:08:54 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:08:54 -0500
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2014-09-19 17:08:54 -0500
+
+
+Started GET "/assets/versions.js?body=1" for 127.0.0.1 at 2014-09-19 17:08:54 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:08:54 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:09:17 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 22ms (Views: 21.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-09-19 17:09:17 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:09:17 -0500
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2014-09-19 17:09:17 -0500
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-09-19 17:09:17 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-19 17:09:17 -0500
+
+
+Started GET "/assets/versions.css?body=1" for 127.0.0.1 at 2014-09-19 17:09:17 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-09-19 17:09:17 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:09:17 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:09:17 -0500
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-09-19 17:09:17 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-09-19 17:09:17 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:09:17 -0500
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2014-09-19 17:09:17 -0500
+
+
+Started GET "/assets/versions.js?body=1" for 127.0.0.1 at 2014-09-19 17:09:17 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:09:17 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:11:17 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 28ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:11:18 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-19 17:11:18 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-09-19 17:11:18 -0500
+
+
+Started GET "/assets/versions.css?body=1" for 127.0.0.1 at 2014-09-19 17:11:18 -0500
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-09-19 17:11:18 -0500
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-09-19 17:11:18 -0500
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2014-09-19 17:11:18 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:11:18 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:11:18 -0500
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-09-19 17:11:18 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-09-19 17:11:18 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:11:18 -0500
+
+
+Started GET "/assets/versions.js?body=1" for 127.0.0.1 at 2014-09-19 17:11:18 -0500
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2014-09-19 17:11:18 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:11:18 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:11:24 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 7ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:11:24 -0500
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-09-19 17:11:24 -0500
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-09-19 17:11:24 -0500
+
+
+Started GET "/assets/versions.css?body=1" for 127.0.0.1 at 2014-09-19 17:11:24 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-19 17:11:24 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-09-19 17:11:24 -0500
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2014-09-19 17:11:25 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:11:25 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:11:25 -0500
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-09-19 17:11:25 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-09-19 17:11:25 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:11:25 -0500
+
+
+Started GET "/assets/versions.js?body=1" for 127.0.0.1 at 2014-09-19 17:11:25 -0500
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2014-09-19 17:11:25 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:11:25 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:11:30 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 24ms (Views: 23.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:11:30 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-19 17:11:30 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-09-19 17:11:30 -0500
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-09-19 17:11:30 -0500
+
+
+Started GET "/assets/versions.css?body=1" for 127.0.0.1 at 2014-09-19 17:11:30 -0500
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-09-19 17:11:30 -0500
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2014-09-19 17:11:30 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:11:30 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:11:30 -0500
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-09-19 17:11:30 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:11:30 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-09-19 17:11:30 -0500
+
+
+Started GET "/assets/versions.js?body=1" for 127.0.0.1 at 2014-09-19 17:11:30 -0500
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2014-09-19 17:11:30 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:11:30 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:12:36 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 27ms (Views: 26.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:12:36 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-09-19 17:12:36 -0500
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-09-19 17:12:36 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-19 17:12:36 -0500
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-09-19 17:12:36 -0500
+
+
+Started GET "/assets/versions.css?body=1" for 127.0.0.1 at 2014-09-19 17:12:36 -0500
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2014-09-19 17:12:36 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:12:36 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:12:36 -0500
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-09-19 17:12:36 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-09-19 17:12:36 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:12:36 -0500
+
+
+Started GET "/assets/versions.js?body=1" for 127.0.0.1 at 2014-09-19 17:12:36 -0500
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2014-09-19 17:12:36 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:12:36 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:12:51 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:12:51 -0500
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-09-19 17:12:51 -0500
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-09-19 17:12:51 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-09-19 17:12:51 -0500
+
+
+Started GET "/assets/versions.css?body=1" for 127.0.0.1 at 2014-09-19 17:12:51 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-19 17:12:51 -0500
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2014-09-19 17:12:51 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:12:51 -0500
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-09-19 17:12:51 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-09-19 17:12:51 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:12:51 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:12:51 -0500
+
+
+Started GET "/assets/versions.js?body=1" for 127.0.0.1 at 2014-09-19 17:12:51 -0500
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2014-09-19 17:12:51 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:12:51 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:13:02 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 23ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:13:02 -0500
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-09-19 17:13:02 -0500
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-09-19 17:13:02 -0500
+
+
+Started GET "/assets/versions.css?body=1" for 127.0.0.1 at 2014-09-19 17:13:02 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-09-19 17:13:02 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-19 17:13:02 -0500
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2014-09-19 17:13:02 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:13:02 -0500
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-09-19 17:13:02 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:13:02 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-09-19 17:13:02 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:13:02 -0500
+
+
+Started GET "/assets/versions.js?body=1" for 127.0.0.1 at 2014-09-19 17:13:02 -0500
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2014-09-19 17:13:02 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:13:02 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:14:12 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 37ms (Views: 36.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:14:12 -0500
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-09-19 17:14:13 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-09-19 17:14:13 -0500
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-09-19 17:14:13 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-19 17:14:13 -0500
+
+
+Started GET "/assets/versions.css?body=1" for 127.0.0.1 at 2014-09-19 17:14:13 -0500
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2014-09-19 17:14:13 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:14:13 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:14:13 -0500
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-09-19 17:14:13 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:14:13 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-09-19 17:14:13 -0500
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2014-09-19 17:14:13 -0500
+
+
+Started GET "/assets/versions.js?body=1" for 127.0.0.1 at 2014-09-19 17:14:13 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:14:13 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:14:24 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 33ms (Views: 32.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:14:24 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-19 17:14:24 -0500
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-09-19 17:14:24 -0500
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-09-19 17:14:24 -0500
+
+
+Started GET "/assets/versions.css?body=1" for 127.0.0.1 at 2014-09-19 17:14:24 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-09-19 17:14:24 -0500
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2014-09-19 17:14:25 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:14:25 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:14:25 -0500
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-09-19 17:14:25 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-09-19 17:14:25 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:14:25 -0500
+
+
+Started GET "/assets/versions.js?body=1" for 127.0.0.1 at 2014-09-19 17:14:25 -0500
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2014-09-19 17:14:25 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:14:25 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:14:33 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 73ms (Views: 73.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:14:33 -0500
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-09-19 17:14:33 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-19 17:14:33 -0500
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-09-19 17:14:33 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-09-19 17:14:33 -0500
+
+
+Started GET "/assets/versions.css?body=1" for 127.0.0.1 at 2014-09-19 17:14:33 -0500
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2014-09-19 17:14:33 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:14:33 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:14:33 -0500
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-09-19 17:14:33 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-09-19 17:14:33 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:14:33 -0500
+
+
+Started GET "/assets/versions.js?body=1" for 127.0.0.1 at 2014-09-19 17:14:33 -0500
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2014-09-19 17:14:33 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:14:33 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:16:11 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 35ms (Views: 34.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:16:11 -0500
+
+
+Started GET "/assets/versions.css?body=1" for 127.0.0.1 at 2014-09-19 17:16:11 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-09-19 17:16:11 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-19 17:16:11 -0500
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-09-19 17:16:11 -0500
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-09-19 17:16:11 -0500
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2014-09-19 17:16:11 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:16:11 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:16:11 -0500
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-09-19 17:16:11 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-09-19 17:16:11 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:16:11 -0500
+
+
+Started GET "/assets/versions.js?body=1" for 127.0.0.1 at 2014-09-19 17:16:11 -0500
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2014-09-19 17:16:11 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:16:11 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:16:18 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 38ms (Views: 37.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:16:18 -0500
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-09-19 17:16:18 -0500
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-09-19 17:16:18 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-19 17:16:18 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-09-19 17:16:18 -0500
+
+
+Started GET "/assets/versions.css?body=1" for 127.0.0.1 at 2014-09-19 17:16:18 -0500
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2014-09-19 17:16:18 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:16:18 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:16:18 -0500
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-09-19 17:16:18 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:16:18 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-09-19 17:16:18 -0500
+
+
+Started GET "/assets/versions.js?body=1" for 127.0.0.1 at 2014-09-19 17:16:18 -0500
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2014-09-19 17:16:18 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:16:18 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:16:59 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 22ms (Views: 21.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:16:59 -0500
+
+
+Started GET "/assets/versions.css?body=1" for 127.0.0.1 at 2014-09-19 17:16:59 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-09-19 17:16:59 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-19 17:16:59 -0500
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-09-19 17:16:59 -0500
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-09-19 17:16:59 -0500
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2014-09-19 17:16:59 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:16:59 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:16:59 -0500
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-09-19 17:16:59 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-09-19 17:16:59 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:16:59 -0500
+
+
+Started GET "/assets/versions.js?body=1" for 127.0.0.1 at 2014-09-19 17:16:59 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:16:59 -0500
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2014-09-19 17:16:59 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:17:37 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-19 17:17:37 -0500
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-09-19 17:17:37 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:17:37 -0500
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-09-19 17:17:37 -0500
+
+
+Started GET "/assets/versions.css?body=1" for 127.0.0.1 at 2014-09-19 17:17:37 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-09-19 17:17:37 -0500
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2014-09-19 17:17:37 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:17:37 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:17:37 -0500
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-09-19 17:17:37 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:17:37 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-09-19 17:17:37 -0500
+
+
+Started GET "/assets/versions.js?body=1" for 127.0.0.1 at 2014-09-19 17:17:37 -0500
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2014-09-19 17:17:37 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:17:37 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:17:44 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 31ms (Views: 31.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-09-19 17:17:45 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:17:45 -0500
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-09-19 17:17:45 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-19 17:17:45 -0500
+
+
+Started GET "/assets/versions.css?body=1" for 127.0.0.1 at 2014-09-19 17:17:45 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-09-19 17:17:45 -0500
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2014-09-19 17:17:45 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:17:45 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:17:45 -0500
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-09-19 17:17:45 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-09-19 17:17:45 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:17:45 -0500
+
+
+Started GET "/assets/versions.js?body=1" for 127.0.0.1 at 2014-09-19 17:17:45 -0500
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2014-09-19 17:17:45 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:17:45 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:18:10 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 36ms (Views: 36.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-09-19 17:18:10 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-19 17:18:10 -0500
+
+
+Started GET "/assets/versions.css?body=1" for 127.0.0.1 at 2014-09-19 17:18:10 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-09-19 17:18:10 -0500
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-09-19 17:18:10 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:18:10 -0500
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2014-09-19 17:18:10 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:18:10 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:18:10 -0500
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-09-19 17:18:10 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-09-19 17:18:10 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:18:10 -0500
+
+
+Started GET "/assets/versions.js?body=1" for 127.0.0.1 at 2014-09-19 17:18:10 -0500
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2014-09-19 17:18:10 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:18:10 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:18:26 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 34ms (Views: 34.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:18:26 -0500
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-09-19 17:18:26 -0500
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-09-19 17:18:26 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-09-19 17:18:26 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-19 17:18:26 -0500
+
+
+Started GET "/assets/versions.css?body=1" for 127.0.0.1 at 2014-09-19 17:18:26 -0500
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2014-09-19 17:18:26 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:18:26 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:18:27 -0500
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-09-19 17:18:27 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-09-19 17:18:27 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:18:27 -0500
+
+
+Started GET "/assets/versions.js?body=1" for 127.0.0.1 at 2014-09-19 17:18:27 -0500
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2014-09-19 17:18:27 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:18:27 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:19:19 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 35ms (Views: 35.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-09-19 17:19:19 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-09-19 17:19:19 -0500
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-09-19 17:19:19 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-19 17:19:19 -0500
+
+
+Started GET "/assets/versions.css?body=1" for 127.0.0.1 at 2014-09-19 17:19:19 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:19:19 -0500
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2014-09-19 17:19:19 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:19:19 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:19:19 -0500
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-09-19 17:19:19 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-09-19 17:19:19 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:19:19 -0500
+
+
+Started GET "/assets/versions.js?body=1" for 127.0.0.1 at 2014-09-19 17:19:19 -0500
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2014-09-19 17:19:19 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:19:19 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:19:26 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 24ms (Views: 23.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:19:26 -0500
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-09-19 17:19:26 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-19 17:19:26 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-09-19 17:19:26 -0500
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-09-19 17:19:26 -0500
+
+
+Started GET "/assets/versions.css?body=1" for 127.0.0.1 at 2014-09-19 17:19:26 -0500
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2014-09-19 17:19:26 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:19:26 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:19:26 -0500
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-09-19 17:19:26 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-09-19 17:19:26 -0500
+
+
+Started GET "/assets/versions.js?body=1" for 127.0.0.1 at 2014-09-19 17:19:26 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:19:26 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:19:26 -0500
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2014-09-19 17:19:26 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:19:31 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 34ms (Views: 34.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:19:31 -0500
+
+
+Started GET "/assets/versions.css?body=1" for 127.0.0.1 at 2014-09-19 17:19:31 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-19 17:19:31 -0500
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-09-19 17:19:31 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-09-19 17:19:31 -0500
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-09-19 17:19:31 -0500
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2014-09-19 17:19:31 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:19:31 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:19:31 -0500
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-09-19 17:19:31 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-09-19 17:19:31 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:19:31 -0500
+
+
+Started GET "/assets/versions.js?body=1" for 127.0.0.1 at 2014-09-19 17:19:31 -0500
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2014-09-19 17:19:31 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:19:31 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:19:46 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 31ms (Views: 30.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:19:46 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-09-19 17:19:46 -0500
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-09-19 17:19:46 -0500
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-09-19 17:19:46 -0500
+
+
+Started GET "/assets/versions.css?body=1" for 127.0.0.1 at 2014-09-19 17:19:46 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-19 17:19:46 -0500
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2014-09-19 17:19:46 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:19:46 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:19:46 -0500
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-09-19 17:19:46 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-09-19 17:19:46 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:19:46 -0500
+
+
+Started GET "/assets/versions.js?body=1" for 127.0.0.1 at 2014-09-19 17:19:46 -0500
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2014-09-19 17:19:46 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:19:46 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-19 17:19:53 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 31ms (Views: 30.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-19 17:19:53 -0500
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-09-19 17:19:53 -0500
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-09-19 17:19:53 -0500
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-09-19 17:19:53 -0500
+
+
+Started GET "/assets/versions.css?body=1" for 127.0.0.1 at 2014-09-19 17:19:53 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-19 17:19:53 -0500
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2014-09-19 17:19:53 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-19 17:19:53 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-19 17:19:53 -0500
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-09-19 17:19:53 -0500
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-09-19 17:19:53 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-19 17:19:54 -0500
+
+
+Started GET "/assets/versions.js?body=1" for 127.0.0.1 at 2014-09-19 17:19:54 -0500
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2014-09-19 17:19:54 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 17:19:54 -0500
+
+
+Started GET "/projects" for 127.0.0.1 at 2014-09-19 17:27:56 -0500
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-09-19 17:27:56 -0500
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2014-09-19 17:27:57 -0500
+Processing by ProjectsController#new as HTML
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered projects/_form.html.erb (350.4ms)
+  Rendered projects/new.html.erb within layouts/application (351.8ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 369ms (Views: 357.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-09-19 17:27:57 -0500
+
+
+Started POST "/projects" for 127.0.0.1 at 2014-09-19 17:28:17 -0500
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zYdnHnH0hr7y7rzBHeifDWNG3kNMCwDHq2xXl/fUjKk=", "project"=>{"name"=>"sing!", "category_id"=>"2", "initial_text"=>"lalalalala"}, "commit"=>"Create Project"}
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `projects' for nil:NilClass):
+  app/controllers/projects_controller.rb:12:in `create'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (25.6ms)
+=======
   [1m[35m (0.3ms)[0m  CREATE TABLE "votes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "voteable_id" integer, "voteable_type" varchar(255), "positive" boolean, "created_at" datetime, "updated_at" datetime) 
   [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20140917151006"]]
   [1m[35m (1.2ms)[0m  commit transaction
@@ -3973,3 +5849,4 @@ Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2014-09-19 16:12:36 -0500
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-19 16:12:36 -0500
+>>>>>>> deab452fa0e66a308561b1fa375e630460005b80
