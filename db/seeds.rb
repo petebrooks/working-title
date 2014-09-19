@@ -17,7 +17,7 @@ end
 end
 
 User.find_each do |user|
-  user.projects.create!(name: Faker::Lorem.sentence, category_id: rand(1..3))
+  user.projects.create!(name: Faker::Lorem.sentence, category_id: rand(1..3), initial_text: Faker::Company.catch_phrase)
 end
 
 Project.find_each do |project|
