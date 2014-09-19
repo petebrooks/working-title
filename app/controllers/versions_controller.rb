@@ -15,12 +15,11 @@ class VersionsController < ApplicationController
   end
 
   def create
-    @version = Version.create(version_params)
+    @version = current_user.versions.create(version_params)
     redirect_to project_version_path(@version.project, @version)
   end
 
   private
-
   def version_params
     params.require(:version).permit(:contribution, :insertion_index, :previous_version_id)
   end
