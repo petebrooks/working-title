@@ -11,26 +11,3 @@
  *= require_self
  *= require_tree .
  */
-
-header h1 {
-  font-family: 'Petit Formal Script', cursive;
-  display: inline-block;
-}
-
-header {
-  width: 90%;
-  margin: 0 auto;
-  border-bottom: grey 1px;
-}
-
-nav ul {
-  display: inline-block;
-  text-align: right;
-}
-
-nav li {
-  margin-right: 25px;
-  display: inline;
-  text-decoration: none;
-  list-style-type: none;
-}
