@@ -3,7 +3,7 @@ require 'rails_helper'
 describe Version do
   before(:each) do
     @user = User.create!(name: "Test User", email: "test@user.com", password: "password", password_confirmation: "password")
-    @project = Project.create!(name: "Test Project", initiator: @user)
+    @project = Project.create!(name: "Test Project", initiator: @user, initial_text: Faker::Company.catch_phrase)
     @version = Version.create!(contribution: 'testestestest', contributor_id: 1, project: @project)
     @version2 = Version.create!(contribution: 'testestestest', previous_version: @version)
     @version3 = Version.create!(contribution: 'testestestest', previous_version: @version2)
@@ -43,12 +43,16 @@ describe Version do
   end
 
   describe '#branch' do
-    it 'should return an array of strings' do
+    it 'should return an array of versions' do
       expect(@version2.branch.first).to be_a(Version)
     end
 
-    it 'should return the correct number of strings' do
+    it 'should return the correct number of objects' do
       expect(@version4.branch.length).to eq(4)
+    end
+
+    it 'should include self' do
+      expect(@version4.branch).to include(@version4)
     end
   end
 
@@ -59,6 +63,10 @@ describe Version do
 
     it 'should return the correct number of strings' do
       expect(@version4.branch_text.length).to eq(4)
+    end
+
+    it "should include self's contribution" do
+      expect(@version4.branch_text).to include(@version4.contribution)
     end
   end
 end
