@@ -3,14 +3,20 @@
 
   <div class = "top_five_projects">
     <% if "#{cat.name}" == "Story" %>
-       <span class = "icons"><i class="fa fa-pencil-square-o"></i></span>
-      <p><%= link_to "#{cat.name}", category_path(cat) %></p>
+      <%= link_to category_path(cat) do %>
+        <span class = "icons"><i class="fa fa-pencil-square-o"></i></span>
+      <% end %>
+        <p><%= cat.name %></p>
     <% elsif "#{cat.name}" == "Poem" %>
-      <span class = "icons"><i class="fa fa-bars"></i></span>
-      <p><%= link_to "#{cat.name}", category_path(cat) %></p>
+        <%= link_to category_path(cat) do %>
+          <span class = "icons"><i class="fa fa-bars"></i></span>
+        <% end %>
+        <p><%= cat.name %></p>
     <% else %>
-      <span class = "icons"><i class="fa fa-music"></i></span>
-      <p><%= link_to "#{cat.name}", category_path(cat) %></p>
+        <%= link_to category_path(cat) do %>
+          <span class = "icons"><i class="fa fa-music"></i></span>
+        <% end %>
+        <p><%= cat.name %></p>
     <% end %>
           <ol>
             <span>Top 5:</span><br><br>
@@ -21,3 +27,5 @@
   </div>
     <% end %>
 </div>
+
+

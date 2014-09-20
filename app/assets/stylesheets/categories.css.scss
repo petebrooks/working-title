@@ -31,10 +31,25 @@
 }
 
 a:hover {
-  color: black ;
+  color: gray ;
   font-weight: bold;
 }
 
-.fa.fa-pencil-square-o{
+.icons {
+  font-size: 4rem;
+  text-align: center;
+  display: block;
+}
 
+p {
+  font-size: 1.5rem;
+}
+
+@media (max-width:400px){
+  .top_five_projects{
+    width: 100%;
+  }
+  p{
+    display: none;
+  }
 }
