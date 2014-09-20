@@ -1,4 +1,7 @@
 <div class="container">
+  <div class="category_header">
+    <% if project.category ==  %>
+  </div>
   <div class="sort">
     <div class="sort_icon"><i class="fa fa-sort"></i></div>
     <div class="sort_fields">
@@ -8,25 +11,27 @@
     </div>
   </div>
 
-  <% @category.projects.each do |project| %>
-  <div class="project_box">
-    <%= link_to project_path(project) do %>
-      <div class="project_link">
-      <p>
-        <span class="project_name"><%= project.name %></span>
-      </p>
-      <p>
-        <span class="first_version"> <%= project.versions.first.contribution %>
+  <div class="all_projects">
+    <% @category.projects.each do |project| %>
+    <div class="project_box">
+      <%= link_to project_path(project) do %>
+        <div class="project_link">
+        <p>
+          <span class="project_name"><%= project.name %></span>
         </p>
-    </div>
-    <div class="stats">
-      <p>
-        <div id="sort_value"><i class="fa fa-thumbs-up"></i><br></div>
-        <div id="sort_value"><i class="fa fa-thumbs-o-up"></i> <%=project.get_popular_version.calculate_branch_vote_score %><br></div>
-        <div id="sort_value"><i class="fa fa-user"> <%= project.total_versions %> </i><br></div>
-      </p>
+        <p>
+          <span class="first_version"> <%= project.versions.first.contribution %>
+          </p>
+      </div>
+      <div class="stats">
+        <p>
+          <div id="sort_value"><i class="fa fa-thumbs-up"> </i><br></div>
+          <div id="sort_value"><i class="fa fa-thumbs-o-up"> </i> <%=project.get_popular_version.calculate_branch_vote_score %><br></div>
+          <div id="sort_value"><i class="fa fa-user"> <%= project.total_versions %> </i><br></div>
+        </p>
+      </div>
+      <% end %>
     </div>
     <% end %>
   </div>
-  <% end %>
 </div>

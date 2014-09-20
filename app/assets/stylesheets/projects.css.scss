@@ -1,10 +1,14 @@
 @import "variables";
+.category_header {
+  height: 100px;
+}
+
 
 .sort {
-  margin-top: 10px;
+  margin-top: 30px;
   width: 100%;
   padding: 10px;
-  height: 25px;
+  height: 40px;
   border-bottom: solid #ddd 1px;
   border-top: solid #ddd 1px;
 }
@@ -15,21 +19,21 @@
 }
 .sort_icon {
   float: left;
-  padding: 1%
 }
 
 .sort_fields {
   margin: 0 auto;
   float: left;
   width: 80%;
-  margin-left: 7%;
-  margin-right: 10%
+  margin-left: 15%;
+  // margin-right: 10%;
+  // background-color: red;
 }
 
 #sort_field {
   float: left;
   font-size: 14px;
-  padding: 1% 5% 1% 5%;
+  padding: 0.5% 5% 0.5% 5%;
   margin: 0 auto;
 }
 
@@ -40,7 +44,7 @@
   height: 110px;
   border-radius: 20px;
   border: solid 1px #ddd;
-  background-color: $white;
+  background-color: #fff;
   padding: 2px 20px 2px 30px;
 }
 
