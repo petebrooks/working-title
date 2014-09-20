@@ -1,1 +1,25 @@
 @import "variables";
+
+/*#version_children  {
+  display: none;
+  background-color: yellow;
+  margin-left: 50px;
+  display: inline;
+}*/
+
+div#children {
+  display: inline;
+  margin-left: 15px;
+}
+
+#collapse_branch {
+  display: none;
+}
+
+i {
+  float: left;
+}
+
+.hidden {
+  display: none;
+}
