@@ -23,3 +23,10 @@ i {
 .hidden {
   display: none;
 }
+
+input#add_contribution {
+  margin: 0;
+  display: block;
+  border: none;
+  background-color: lightgray;
+}

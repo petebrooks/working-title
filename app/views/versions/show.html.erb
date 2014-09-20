@@ -13,13 +13,13 @@
         <% if @version.project.category.name == "story" %>
           <span id="contribution"><%= version.contribution %></span>
         <% else %>
-          <p id="contribution"><%= version.contribution %></p>
+          <span id="contribution" class="clearfix"><%= version.contribution %></span>
         <% end %>
         <span class="hidden">Added by <%= version.contributor.name %> on <%= version.updated_at.strftime("%b %e, %Y") %></span>
       <% end %>
   </div>
 
-  <div id="children_container">
+  <div id="children_container" class="clearfix">
       <span>
         <%= fa_icon "plus-circle", id:"expand_branch" %>
         <%= fa_icon "minus-circle", id:"collapse_branch" %>

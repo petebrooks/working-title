@@ -19,7 +19,7 @@ $(document).ready(function() {
 
   branch_div.on("click", "#contribution", function(){
     $("input#add_contribution").remove();
-    $(this).after('<input id="add_contribution" placeholder="Add new text here"> </input>');
+    $(this).after().after('<input id="add_contribution" placeholder="Add new text here"> </input>');
   });
 
   branch_div.on("keyup", "input#add_contribution", function(e){
