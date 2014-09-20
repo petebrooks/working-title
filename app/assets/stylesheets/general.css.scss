@@ -1,26 +1,27 @@
 @import "variables";
 
-header h1 {
-  font-family: $font-family-cursive;
-  display: inline-block;
+* {
+  box-sizing: border-box;
 }
 
-header {
-  width: 90%;
+body {
+  background-color: $white;
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
   margin: 0 auto;
-  border-bottom: solid tan 1px;
+  padding: 0 1em;
 }
 
-nav ul {
-  display: inline-block;
-  text-align: right;
-}
-
-nav li {
-  margin-right: 25px;
-  display: inline;
-  text-decoration: none;
-  list-style-type: none;
+.clearfix {
+  &:after {
+    content: " ";
+    display: block; 
+    height: 0; 
+    clear: both;
+  }
 }
 
 .box {
@@ -32,9 +33,3 @@ nav li {
   background-color: $white;
 }
 
-.container {
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 1em;
-}

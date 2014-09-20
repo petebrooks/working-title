@@ -1,0 +1,9 @@
+<div class="container">
+  <% unless @projects.empty? %>
+    <ul>
+      <% @projects.each do |project| %>
+        <%= link_to "#{project.name}", project_path(project) %>
+      <% end %>
+    </ul>
+  <% end %>
+</div>
