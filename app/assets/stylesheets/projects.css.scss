@@ -17,6 +17,17 @@
   text-align: center;
 }
 
-.all_projects a {
-  text-align: right;
+// .create_project {
+//   display:block;
+//   margin-left: 80%
+// }
+
+.all_projects {
+  margin-top: 3%;
+}
+
+@media (max-width:400px){
+  .all_projects{
+    width: 100%;
+  }
 }
