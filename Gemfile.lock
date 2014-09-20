@@ -50,6 +50,8 @@ GEM
     execjs (2.2.1)
     faker (1.2.0)
       i18n (~> 0.5)
+    font-awesome-sass (4.2.0)
+      sass (~> 3.2)
     hike (1.2.3)
     i18n (0.6.11)
     jbuilder (1.5.3)
@@ -165,6 +167,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   database_cleaner (~> 1.2.0)
   faker
+  font-awesome-sass
   jbuilder (~> 1.2)
   jquery-rails
   pg
