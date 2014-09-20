@@ -4,7 +4,9 @@ WorkingTitle::Application.routes.draw do
   resources :projects, except: [:destroy, :edit, :update] do
     resources :versions, except: [:destroy, :edit, :update]
   end
+
   resources :categories, only: [:index, :show]
+
   resources :votes, only: [:create]
 
   resources :sessions, only: [:new, :create, :destroy]

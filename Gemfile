@@ -30,6 +30,8 @@ gem "font-awesome-rails"
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
+gem 'font-awesome-sass'
+
 group :test, :development do
 	gem 'faker'
 	gem 'sqlite3'
