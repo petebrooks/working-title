@@ -1,3 +1,5 @@
+require 'json'
+
 class Version < ActiveRecord::Base
   belongs_to :project
   belongs_to :contributor, class_name: "User"
@@ -45,7 +47,7 @@ class Version < ActiveRecord::Base
   end
 
   def create_tree_hash
-    { id: self.id,
+    hash = { id: self.id,
       contribution: self.contribution,
       children: self.children.map(&:create_tree_hash) }
   end

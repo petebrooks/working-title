@@ -50,6 +50,11 @@ GEM
     execjs (2.2.1)
     faker (1.2.0)
       i18n (~> 0.5)
+    gon (5.2.0)
+      actionpack (>= 2.3.0)
+      json
+      multi_json
+      request_store (>= 1.0.5)
     hike (1.2.3)
     i18n (0.6.11)
     jbuilder (1.5.3)
@@ -101,6 +106,7 @@ GEM
     rake (10.3.2)
     rdoc (4.1.2)
       json (~> 1.4)
+    request_store (1.1.0)
     rspec-core (3.0.4)
       rspec-support (~> 3.0.0)
     rspec-expectations (3.0.4)
@@ -165,6 +171,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   database_cleaner (~> 1.2.0)
   faker
+  gon
   jbuilder (~> 1.2)
   jquery-rails
   pg

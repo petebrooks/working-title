@@ -45,4 +45,8 @@ class Project < ActiveRecord::Base
     self.versions.create!(contribution: @initial_text, contributor: self.initiator, insertion_index: 0)
   end
 
+  def create_tree
+    self.versions.first.create_tree_hash
+  end
+
 end

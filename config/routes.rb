@@ -2,6 +2,7 @@ WorkingTitle::Application.routes.draw do
 
   resources :users, except: [:index]
   resources :projects, except: [:destroy, :edit, :update] do
+    get "tree", on: :member
     resources :versions, except: [:destroy, :edit, :update]
   end
   resources :categories, only: [:index, :show]
