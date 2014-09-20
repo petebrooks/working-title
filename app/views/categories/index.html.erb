@@ -1,5 +1,8 @@
 <div class="container">
   <% @categories.each do |cat| %>
-    <p> <%= link_to "#{cat.name}", category_path(cat) %> </p>
+    <p><%= link_to "#{cat.name}", category_path(cat) %></p>
+          <%  cat.get_top_five_projects.each do |proj| %>
+            <li><%= link_to  "#{proj.name}", project_path(proj) %></li>
+          <% end %>
   <% end %>
 </div>
