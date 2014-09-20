@@ -47,7 +47,7 @@ class Version < ActiveRecord::Base
   end
 
   def create_tree_hash
-    hash = { id: self.id,
+    { id: self.id,
       contribution: self.contribution,
       children: self.children.map(&:create_tree_hash) }
   end

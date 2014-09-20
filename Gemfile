@@ -29,6 +29,7 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 1.2'
 
 gem 'gon'
+gem 'json'
 
 group :test, :development do
 	gem 'faker'

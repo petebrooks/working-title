@@ -46,7 +46,7 @@ class Project < ActiveRecord::Base
   end
 
   def create_tree
-    self.versions.first.create_tree_hash
+    ActiveSupport::JSON.encode(self.versions.first.create_tree_hash)
   end
 
 end
