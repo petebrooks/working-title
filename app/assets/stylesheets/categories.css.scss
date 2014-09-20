@@ -1,6 +1,21 @@
 @import "variables";
 
 
-.container {
-  margin: auto 0
+.top_five_projects {
+  float: left;
+  width: 33.33%;
+  padding: 1%;
+  box-sizing: border-box;
+}
+
+.top_five_projects li {
+  margin: 0 0 2% 0;
+}
+
+.top_five_projects p {
+  text-align: center
+}
+
+.categories {
+  margin: auto 0;
 }
