@@ -44,4 +44,10 @@ class Version < ActiveRecord::Base
     self.votes.where(positive: true).count - self.votes.where(positive: false).count
   end
 
+  def create_tree_hash
+    { id: self.id,
+      contribution: self.contribution,
+      children: self.children.map(&:create_tree_hash) }
+  end
+
 end
