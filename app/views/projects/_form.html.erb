@@ -13,21 +13,10 @@
   </div>
   <% end %>
 
-  <p>
-    <%= f.text_field :name, placeholder: 'Project Name' %>
-  </p>
-
-  <p>
     <%= f.select(:category_id, @categories) %>
-  </p>
-
-  <p>
+    <%= f.text_field :name, placeholder: 'Project Name' %>
     <%= f.text_field :initial_text, placeholder: 'Initial Text' %>
-  </p>
 
-  <p>
     <%= f.submit %>
-  </p>
-
 <% end %>
 
