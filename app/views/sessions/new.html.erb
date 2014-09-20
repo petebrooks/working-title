@@ -1,9 +1,12 @@
-<h2>Sign In </h2>
-
-<%= flash[:error] if flash[:error] %>
-
-<%= form_tag(:action => 'create') do %>
-  <%= text_field_tag(:email, nil, placeholder: "Email") %>
-  <%= password_field_tag(:password, nil, placeholder: "Password") %>
-  <%= submit_tag("Sign In") %>
-<% end %>
+<div class="container">
+  <div class="form-container">
+    <h3>Login</h3>
+    <%= flash[:error] if flash[:error] %>
+    <%= form_tag(:action => 'create') do %>
+      <%= text_field_tag(:email, nil, placeholder: "Email") %>
+      <%= password_field_tag(:password, nil, placeholder: "Password") %>
+      <%= submit_tag("Login") %>
+    <% end %>
+    <%= link_to "Register", new_user_path, class: "register-link" %>
+  </div>
+</div>

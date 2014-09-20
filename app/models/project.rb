@@ -4,7 +4,7 @@ class Project < ActiveRecord::Base
   belongs_to :category
   belongs_to :initiator, class_name: "User"
   has_many :votes, as: :voteable
-  has_many :versions
+  has_many :versions, dependent: :destroy
 
   validates :initiator, presence: true
   validate :validate_initial_text
