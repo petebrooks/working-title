@@ -1,12 +1,13 @@
-<div class = "all_projects">
-  <h3>All Projects</h3>
-  <% if @projects %>
-    <ul>
-      <% @projects.each do |project| %>
-        <li><a href="<%= project_path(project) %>"><%= project.name %></a></li>
-      <% end %>
-    </ul>
-  <% end %>
-  <%= link_to "Create a Project", new_project_path %>
+<div class = "container">
+  <div class = "all_projects">
+    <%= link_to "Create a Project", new_project_path %>
+    <h3>All Projects</h3>
+    <% if @projects %>
+      <ul>
+        <% @projects.each do |project| %>
+          <li><a href="<%= project_path(project) %>"><%= project.name %></a></li>
+        <% end %>
+      </ul>
+    <% end %>
+  </div>
 </div>
-
