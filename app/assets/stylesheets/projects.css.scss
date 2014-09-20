@@ -1,1 +1,17 @@
 @import "variables";
+
+.all_projects li, a {
+  text-decoration: none;
+  list-style-type: none;
+  color: $black ;
+}
+
+.all_projects li a:hover {
+  color: black;
+  font-weight: bold;
+}
+
+.all_projects h3 {
+  font-family: $font-family-cursive;
+  text-align: center;
+}
