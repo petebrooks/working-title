@@ -1,8 +1,10 @@
 //Color Scheme
 $black: #222;
-$grey: #666;
+$dark-grey: lighten( $black, 20% );
+$grey: lighten( $black, 40% );
+$light-grey: lighten( $black, 60% );
 $white: #f7f7f7;
-$accent: tomato;
+$accent: #4682B4;
 
 //Typography
 $font-family-serif: 'PT Serif', Garamond, 'Times New Roman', serif;

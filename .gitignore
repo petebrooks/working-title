@@ -1,4 +1,4 @@
 .env
 tmp/
 log/
-tmp/cache/
+db/development.sqlite3

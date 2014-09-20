@@ -1,4 +1,5 @@
 @import "variables";
+
 .category_header {
   height: 100px;
 }
@@ -85,4 +86,25 @@
 #sort_value {
   width: 100%;
   margin: 10px;
+
+
+.all_projects li, a {
+  text-decoration: none;
+  list-style-type: none;
+  color: $black ;
+  text-align: center;
 }
+
+.all_projects li a:hover {
+  color: black;
+  font-weight: bold;
+}
+
+.all_projects h3 {
+  font-family: $font-family-cursive;
+  text-align: center;
+}
+
+.all_projects a {
+  text-align: right;
+
