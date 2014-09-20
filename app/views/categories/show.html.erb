@@ -1,5 +1,37 @@
 <div class="container">
-  <% @category.projects.each do |project| %>
-  <p> <%= link_to "#{project.name}", project_path(project) %> </p>
-  <% end %>
+  <div class="category_header">
+    <% if project.category ==  %>
+  </div>
+  <div class="sort">
+    <div class="sort_icon"><i class="fa fa-sort"></i></div>
+    <div class="sort_fields">
+        <div id="sort_field" class="project_score"><i class="fa fa-thumbs-up"></i></i> Project Score</div>
+        <div id="sort_field" class="highest_voted_version"><i class="fa fa-thumbs-o-up"></i> Score of Highest Voted Version</div>
+        <div id="sort_field" class="contributions"><i class="fa fa-user"> Number of Contributions</i></div>
+    </div>
+  </div>
+
+  <div class="all_projects">
+    <% @category.projects.each do |project| %>
+    <div class="project_box">
+      <%= link_to project_path(project) do %>
+        <div class="project_link">
+        <p>
+          <span class="project_name"><%= project.name %></span>
+        </p>
+        <p>
+          <span class="first_version"> <%= project.versions.first.contribution %>
+          </p>
+      </div>
+      <div class="stats">
+        <p>
+          <div id="sort_value"><i class="fa fa-thumbs-up"> </i><br></div>
+          <div id="sort_value"><i class="fa fa-thumbs-o-up"> </i> <%=project.get_popular_version.calculate_branch_vote_score %><br></div>
+          <div id="sort_value"><i class="fa fa-user"> <%= project.total_versions %> </i><br></div>
+        </p>
+      </div>
+      <% end %>
+    </div>
+    <% end %>
+  </div>
 </div>
