@@ -16,7 +16,10 @@ class VersionsController < ApplicationController
 
   def create
     @version = current_user.versions.create(version_params)
-    redirect_to project_version_path(@version.project, @version)
+    respond_to do |format|
+      format.html { redirect_to project_version_path(@version.project, @version) }
+      format.json { render json: @version, id: @version.id }
+    end
   end
 
   private

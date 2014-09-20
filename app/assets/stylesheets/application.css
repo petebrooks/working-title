@@ -11,5 +11,6 @@
  *= require_self
  *= require normalize
  *= require font-awesome
+*= require jquery.qtip.css
  *= require_tree .
  */

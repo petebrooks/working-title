@@ -1,27 +1,35 @@
 <div class = "container">
   <h2><%= @version.project.name %></h2>
+  <small><%= @version.project.category.name %> Last Updated By: <%= @version.contributor.name %> on <%= @version.updated_at.strftime("%b %e, %Y") %></small><br>
 
 
   <% unless @version.previous_version == nil %>
-    <%= link_to "Back", project_version_path(@version.project, @version.previous_version) %>
+  <%= link_to "Back", project_version_path(@version.project, @version.previous_version) %>
+  <%= link_to "Back to Original", project_version_path(@version.project, @version.project.versions.first) %>
   <% end %>
 
-  <div id="branch_text">
-    <% if @version.project.category.name == "story" %>
-      <p><%=  @version.branch_text.join(" ")%></p>
-    <% else @version.project.category.name == "song" %>
-
-      <% @version.branch_text.each do |line| %>
-        <p><%= line %></p>
+  <div id="branch_text" versionid="<%= @version.id %>" projectid="<%= @version.project_id %>">
+      <% @version.branch.each do |version| %>
+        <% if @version.project.category.name == "story" %>
+          <span id="contribution"><%= version.contribution %></span>
+        <% else %>
+          <span id="contribution" class="clearfix"><%= version.contribution %></span>
+        <% end %>
+        <span class="hidden">Added by <%= version.contributor.name %> on <%= version.updated_at.strftime("%b %e, %Y") %></span>
       <% end %>
-    <% end %>
   </div>
 
-    <%= render 'form' %>
+  <div id="children_container" class="clearfix">
+      <span>
+        <%= fa_icon "plus-circle", id:"expand_branch" %>
+        <%= fa_icon "minus-circle", id:"collapse_branch" %>
+      </span>
+      <div id="children"
+    <% @version.children.each do |child| %>
+    <p><%= link_to "#{child.contribution}", project_version_path(child.project, child) %></p>
+    <% end %>
+  </div>
+  </div>
 
-      <% @version.children.each do |child| %>
-        <p><%= link_to "#{child.contribution}", project_version_path(child.project, child) %></p>
-      <% end %>
-
-    <%= render 'votes/form_versions' %>
+  <%= render 'votes/form_versions' %>
 </div>
