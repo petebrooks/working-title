@@ -12,7 +12,7 @@ class Version < ActiveRecord::Base
   after_create :create_vote
 
   def create_vote
-    self.vote.create(user: self.contributor, positive: true)
+    self.votes.create(user: self.contributor, positive: true)
   end
 
   def check_project

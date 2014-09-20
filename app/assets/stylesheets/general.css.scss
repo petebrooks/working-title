@@ -1,5 +1,7 @@
+@import "variables";
+
 header h1 {
-  font-family: 'Petit Formal Script', cursive;
+  font-family: $font-family-cursive;
   display: inline-block;
 }
 
@@ -26,5 +28,13 @@ nav li {
   width: 500px;
   height: 500px;
   border-radius: 30px;
-  box-shadow: 0px 0px 15px 1px tan;
+  box-shadow: 0px 0px 15px 1px $black;
+  background-color: $white;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1em;
 }
