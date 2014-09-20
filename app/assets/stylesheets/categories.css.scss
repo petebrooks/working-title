@@ -1,11 +1,15 @@
 @import "variables";
 
+.container {
+  height: 100%;
+}
 
 .top_five_projects {
   float: left;
   width: 33.33%;
   padding: 1%;
   box-sizing: border-box;
+  min-height: 100%;
 }
 
 .top_five_projects li {
@@ -13,9 +17,24 @@
 }
 
 .top_five_projects p {
-  text-align: center
+  text-align: center;
+  font-family: $font-family-serif;
 }
 
 .categories {
   margin: auto 0;
+}
+
+.top_five_projects a {
+  text-decoration: none;
+  color: $black ;
+}
+
+a:hover {
+  color: black ;
+  font-weight: bold;
+}
+
+.fa.fa-pencil-square-o{
+
 }

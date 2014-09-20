@@ -1,15 +1,19 @@
 <div class="container">
     <% @categories.each do |cat| %>
+
   <div class = "top_five_projects">
     <% if "#{cat.name}" == "Story" %>
-      <i class="fa fa-book"></i>
+       <span class = "icons"><i class="fa fa-pencil-square-o"></i></span>
       <p><%= link_to "#{cat.name}", category_path(cat) %></p>
     <% elsif "#{cat.name}" == "Poem" %>
+      <span class = "icons"><i class="fa fa-bars"></i></span>
       <p><%= link_to "#{cat.name}", category_path(cat) %></p>
     <% else %>
+      <span class = "icons"><i class="fa fa-music"></i></span>
       <p><%= link_to "#{cat.name}", category_path(cat) %></p>
     <% end %>
           <ol>
+            <span>Top 5:</span><br><br>
             <%  cat.get_top_five_projects.each do |proj| %>
               <li><%= link_to  "#{proj.name}", project_path(proj) %></li>
             <% end %>
