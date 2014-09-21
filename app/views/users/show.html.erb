@@ -11,8 +11,7 @@
       <div class="tab-content current" id="tab-1">
         <h3>Your Projects:</h3>
           <% @user.projects.each do |project| %>
-
-          <p><%= link_to "#{project.name}", project_path(project) %></p>
+              <p><%= link_to "#{project.name}", project_path(project) %></p>
         <% end %>
       </div>
 
