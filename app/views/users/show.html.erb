@@ -1,24 +1,39 @@
-<h3><%= @user.name %></h3>
-<h3><%= @user.email %></h3>
+<div class = "container">
+  <div class = "profile">
+    <% if current_user == @user %>
+    <h2><%= @user.name.capitalize %></h2>
+      <ul class="tabs">
+        <li class="tab-link current" data-tab="tab-1">Your Projects</a></li>
+        <li class="tab-link" data-tab="tab-2">Your Contributions</a></li>
+        <li class="tab-link" data-tab="tab-3">Account</a></li>
+      </ul>
 
-<% if current_user == @user %>
-  <%= link_to "Edit Profile", edit_user_path(@user) %>
-  <%= link_to("Delete Account", user_path(@user), method: :delete) %>
-  <%= link_to "Create Project", new_project_path %>
+      <div class="tab-content current" id="tab-1">
+        <h3>Your Projects:</h3>
+          <% @user.projects.each do |project| %>
 
-  <h3>Your Projects:</h3>
-    <% @user.projects.each do |project| %>
-    <p><%= link_to "#{project.name}", project_path(project) %></p>
-  <% end %>
+          <p><%= link_to "#{project.name}", project_path(project) %></p>
+        <% end %>
+      </div>
 
-  <h3>Projects You Contributed To</h3>
-    <% @user.unique_projects.each do |project| %>
-      <p><%= link_to "#{project.name}", project_path(project) %></p>
-          <strong>Versions:</strong>
-          <% project.versions_by(@user).each do |version| %>
-            <li><%= link_to "#{version.contribution}", project_version_path(project, version) %></li>
-            <% end %>
+      <div class = "tab-content" id="tab-2">
+        <h3>Projects You Contributed To:</h3>
+          <% @user.unique_projects.each do |project| %>
+            <p><%= link_to "#{project.name}", project_path(project) %></p>
+                <strong>Versions:</strong>
+                <% project.versions_by(@user).each do |version| %>
+                  <li><%= link_to "#{version.contribution}", project_version_path(project, version) %></li>
+                  <% end %>
+          <% end %>
+      </div>
+
+      <div class="tab-content" id="tab-3">
+        <span><strong>Email:</strong> <%= @user.email %></span><br>
+        <%= link_to "Edit Profile", edit_user_path(@user) %><br>
+        <%= link_to("Delete Account", user_path(@user), method: :delete) %>
+      </div>
     <% end %>
-<% end %>
+  </div>
+</div>
 
 
