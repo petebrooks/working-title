@@ -1,12 +1,15 @@
 <div class = "container">
-  <h2><%= @version.project.name %></h2>
-  <small><%= @version.project.category.name %> Last Updated By: <%= @version.contributor.name %> on <%= @version.updated_at.strftime("%b %e, %Y") %></small><br>
+  <h2 class="page-title"><%= @version.project.name %></h2>
+  <%= image_tag @version.contributor.gravatar_url(default: image_url("default-icon.png")), class: "profile-photo" %>
+  <div class="byline"><div class="byline-label"><%= @version.project.category.name %> Last Updated By:</div><div class="byline-name"><%= @version.contributor.name %></div><div class="byline-date"><%= @version.updated_at.strftime("%b %e, %Y") %></div></div>
 
 
   <% unless @version.previous_version == nil %>
-  <%= link_to "Back", project_version_path(@version.project, @version.previous_version) %>
-  <%= link_to "Back to Original", project_version_path(@version.project, @version.project.versions.first) %>
+  <div class="controls">
+  <%= link_to '<i class="fa fa-backward"></i>Rewind'.html_safe, project_version_path(@version.project, @version.previous_version) %>
+  <%= link_to '<i class="fa fa-fast-backward"></i>Back to Original'.html_safe, project_version_path(@version.project, @version.project.versions.first) %>
   <% end %>
+</div>
 
   <div id="branch_text" versionid="<%= @version.id %>" projectid="<%= @version.project_id %>">
       <% @version.branch.each do |version| %>
