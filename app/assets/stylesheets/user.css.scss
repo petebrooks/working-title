@@ -1,1 +1,49 @@
 @import "variables";
+
+.profile {
+  width: 50%;
+  margin: 0 auto;
+
+  ul.tabs{
+    margin:0;
+    padding:0;
+    list-style: none;
+  }
+
+  ul.tabs li {
+    background: none;
+    color: #222;
+    display: inline-block;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-family: $font-family-cursive;
+  }
+
+  ul.tabs li.current {
+    background: #ededed;
+    color: #222;
+  }
+
+  .tab-content {
+    display: none;
+    background: #ededed;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .tab-content.current {
+    display:inherit;
+  }
+
+  h3 {
+    font-family: $font-family-serif;
+  }
+
+  span {
+    line-height: 2commitrem;
+  }
+
+
+}
+
+
