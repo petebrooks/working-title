@@ -1,7 +1,7 @@
 @import "variables";
 
 .profile {
-  width: 50%;
+  width: 65%;
   margin: 0 auto;
 
   ul.tabs{
@@ -17,11 +17,15 @@
     padding: 10px 15px;
     cursor: pointer;
     font-family: $font-family-cursive;
+    width: 32.71%;
   }
 
   ul.tabs li.current {
     background: #ededed;
     color: #222;
+    border-top-left-radius: 0.9rem;
+    border-top-right-radius: 0.9rem;
+
   }
 
   .tab-content {
@@ -35,6 +39,8 @@
     display:inherit;
     list-style: none;
     line-height: 1.5rem;
+    border-bottom-left-radius: 0.9rem;
+    border-bottom-right-radius: 0.9rem;
   }
 
   h3 {
@@ -45,7 +51,43 @@
     line-height: 2rem;
   }
 
+  .tabs li p {
+    line-height: 0;
+    font-size: 0.85rem;
+    text-align: center;
+  }
+}
 
+@media (max-width: 1080px){
+  .profile {
+    width:80%;
+  }
+}
+
+@media (max-width: 720px){
+  .profile {
+    ul.tabs li {
+        width: 32.18%;
+    }
+
+    .tabs li p  {
+      font-size: 0.5rem;
+    }
+  }
+}
+
+@media (max-width: 400px){
+  .profile{
+    width: 90%;
+
+    ul.tabs li {
+      width: 32.18%;
+    }
+
+    .tabs li p  {
+      font-size: 0.5rem;
+    }
+  }
 }
 
 

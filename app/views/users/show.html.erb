@@ -3,9 +3,9 @@
     <% if current_user == @user %>
     <h2><%= @user.capitalize_full_name %></h2>
       <ul class="tabs">
-        <li class="tab-link current" data-tab="tab-1">Your Projects</a></li>
-        <li class="tab-link" data-tab="tab-2">Your Contributions</a></li>
-        <li class="tab-link" data-tab="tab-3">Account</a></li>
+        <li class="tab-link current" data-tab="tab-1"><p>Projects</p></li>
+        <li class="tab-link" data-tab="tab-2"><p>Contributions</p></li>
+        <li class="tab-link" data-tab="tab-3"><p>Account</p></li>
       </ul>
 
       <div class="tab-content current" id="tab-1">
