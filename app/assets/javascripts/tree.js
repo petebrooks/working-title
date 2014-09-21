@@ -7,7 +7,7 @@ $(document).ready(function(){
   var nodeColor = "blue";
   var highlightColor = "red";
 
-  var tree = d3.layout.cluster()
+  var tree = d3.layout.tree()
     .sort(null)
     .size([height, width])
     .children(function(d) {
