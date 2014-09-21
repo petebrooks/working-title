@@ -1,0 +1,83 @@
+@import "variables";
+
+.project_box_welcome {
+  float: left;
+  margin: 1em auto 0 auto;
+  border-radius: $border-radius;
+  border: $border-standard;
+  background-color: #fff;
+  padding: .75em 2em;
+  a {
+    text-decoration: none;
+    color: $black;
+  };
+  .project_name {
+    color: $accent;
+  };
+  .project_initiator {
+    color: $dark-grey;
+  }
+}
+
+#project_box_1 {
+  width: 60%;
+  min-height: 350px;
+  .project_name {
+    font-size: 35px;
+  }
+}
+#project_box_2 {
+  width: 37%;
+  min-height: 250px;
+  margin-top: 7%;
+  margin-left: 3%;
+  .project_name {
+    font-size: 25px;
+  }
+}
+
+#project_box_3 {
+  width: 45%;
+  min-height: 350px;
+  .project_name {
+    font-size: 30px;
+  }
+}
+
+#project_box_4 {
+  margin-left: 5%;
+  width: 50%;
+  min-height: 150px;
+  .project_name {
+    font-size: 17px;
+  }
+}
+
+#project_box_5  {
+  width: 30%;
+  margin-left: 2%;
+  min-height: 150px;
+  .project_name, .project_initiator{
+    font-size: 15px;
+  }
+}
+
+#project_box_6 {
+  width: 20%;
+  margin-left: 2%;
+  min-height: 190px;
+  .project_name, .project_initiator{
+    font-size: 13px;
+  }
+}
+
+.project_initiator {
+  font-family: $font-family-serif;
+  font-size: 16px;
+}
+
+#welcome {
+  margin-top: 30px;
+}
+
+

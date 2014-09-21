@@ -25,8 +25,15 @@
               <span class="project_name"><%= project.name %></span>
             </p>
             <p>
+              <% if project.category.name == 'Story' %>
+                <i class="fa fa-book">
+              <% elsif project.category.name == 'Poem' %>
+                <i class="fa fa-bars">
+              <% elsif project.category.name == 'Song' %>
+                <i class="fa fa-music">
+              <% end %>
               <span class="first_version">
-                <%= project.versions.first.contribution %>
+                <%= project.versions.first.contribution %></i>
               </p>
             </div>
             <div class="stats">
