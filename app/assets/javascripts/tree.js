@@ -23,7 +23,12 @@ $(document).ready(function(){
     .attr('height', height)
     .append("g")
     .attr('width', width)
-    .attr('height', height);
+    .attr('height', height)
+    .call(d3.behavior.zoom().scaleExtent([1, 8]).on("zoom", zoom));
+
+  function zoom() {
+    svg.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
+  }
 
   var node = svg.selectAll('.node');
   var link = svg.selectAll('.link');
