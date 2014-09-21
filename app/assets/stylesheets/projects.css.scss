@@ -12,7 +12,6 @@
   margin-left: 30%;
 }
 
-
 .sort {
   margin-top: 30px;
   width: 100%;
@@ -74,6 +73,34 @@
   font-size: 20px
 }
 
+.all_projects {
+  margin-top: 3%;
+}
+
+.all_projects h3 {
+  font-family: $font-family-cursive;
+  text-align: center;
+}
+
+.first_version {
+  font-family: $font-family-serif;
+  margin-top: 10px;
+  padding: 50px 20px 2px 30px;
+}
+
+.all_projects li, a {
+  text-decoration: none;
+  list-style-type: none;
+  color: $black ;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.all_projects li a:hover {
+  color: black;
+  font-weight: bold;
+}
+
 .first_version {
   font-family: $font-family-serif;
   padding: 25px 10px 2px 30px;
@@ -117,3 +144,8 @@
 .all_projects a {
   text-align: right;
 }
+
+@media (max-width:400px){
+  .all_projects{
+    width: 100%;
+  }

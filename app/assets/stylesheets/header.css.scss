@@ -10,10 +10,10 @@ header {
   font-size: 1.1em;
   a {
     text-decoration: none;
-    color: $grey;
+    color: $black;
     &:hover {
-      @include transition(1s);
-      color: $black;
+      @include transition(0.5s);
+      color: $accent;
     }
   }
   nav {
@@ -32,31 +32,63 @@ header {
       }
     }
   }
+  .container {
+    height: 100%;
+  }
 }
 
 .menu-container {
   position: relative;
+  height: 100%;
+  margin-left: 125px;
 }
 
 #pages-nav {
   float: left;
   margin-left: 2em;
-  margin-top: 0.6em;
+  margin-top: 0.4em;
+  #write-link {
+    .fa-pencil-square-o {
+      display: none;
+      font-size: 1.5em;
+      margin-top: 0.1em;
+      @media all and (max-width: $breakpoint-max) {
+        display: inline-block;
+      }
+    }
+    .nav-text {
+      @media all and (max-width: $breakpoint-max) {
+        display: none;
+      }
+    }
+  }
+  #collaborate-link, #explore-link {
+    @media all and (max-width: $breakpoint-max) {
+      display: none;
+    }
+  }
 }
 
 #session-nav {
   float: right;
   margin-right: 1em;
   margin-top: 0.6em;
+  ul {
+    li {
+      margin-left: 1em;
+    }
+  }
+  .fa {
+    font-size: 1.6em;
+    margin-top: -0.1em;
+  }
 }
-
 
 #logo {
   width: 125px;
   height: 125px;
   margin-top: -35px;
   border-radius: 150px;
-  margin-bottom: 1em;
   background-color: #fff;
   background-image: image-url("logo.png");
   background-size: 120px 120px;
@@ -75,6 +107,9 @@ header {
   height: 2em;
   margin-top: 0.5em;
   font-size: 1.3em;
+  @media all and (max-width: $breakpoint-max) {
+    display: none;
+  }
   .search-button {
     width: 20px;
     display: inline-block;
@@ -82,6 +117,10 @@ header {
     margin-top: 0.3em;
     font-size: 1.2em;
     cursor: pointer;
+    &:hover {
+      @include transition(0.5s);
+      color: $accent;
+    }
   }
 }
 
@@ -91,7 +130,7 @@ header {
     outline: none;
     border: 0;
     position: absolute;
-    left: 130px;
+    left: 5px;
     top: 0;
     display: inline-block;
     height: 74px;
