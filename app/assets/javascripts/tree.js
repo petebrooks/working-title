@@ -15,7 +15,7 @@ $(document).ready(function(){
     });
 
   var diagonal = d3.svg.diagonal()
-    .projection(function(d) { return [d.x, d.y]; });
+    .projection(function(d) { return [d.y, d.x]; });
 
   var svg = d3.select("body div.tree")
     .append("svg")
@@ -23,12 +23,17 @@ $(document).ready(function(){
     .attr('height', height)
     .append("g")
     .attr('width', width)
-    .attr('height', height);
-    // .call(d3.behavior.zoom().scaleExtent([1, 8]).on("zoom", zoom));
+    .attr('height', height)
+    .call(d3.behavior.zoom().scaleExtent([1, 8]).on("click", zoom));
+
+  // $(document).on("click", function() {
+  //   // svg.transition().attr("transform", "rotate(90deg)");
+  //   svg.transition().attr("opacity", 0);
+  // });
 
   function zoom() {
     svg.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
-  }
+  };
 
   var node = svg.selectAll('.node');
   var link = svg.selectAll('.link');
@@ -59,16 +64,17 @@ $(document).ready(function(){
       .attr('class', 'node')
       .attr('id', function(d) { return d.nodeid; })
       .attr('transform', function(d) {
-        return 'translate(' + d.x + ',' + d.y + ')';
+        return 'translate(' + d.y + ',' + d.x + ')';
       })
-      .on('mouseover', function(d) {
-        d3.select(this).insert("text")
-        .text(function(d) { return d.contribution})
-        .attr("flood-color", "white");
-      })
-      .on('mouseout', function(d) {
-        d3.select(this).select("text").remove();
-      });
+      // .on('mouseover', function(d) {
+      //   d3.select(this).insert("text")
+      //   .text(function(d) { return d.contribution})
+      //   .attr("flood-color", "white");
+      // })
+      // .on('mouseout', function(d) {
+      //   d3.select(this).select("text").remove();
+      // });
+      .on("click", function(d) {console.log(d.id)});
 
     nodeEnter.append('circle')
       .attr("r", function(d) { return voteScale(d.voteScore)})
@@ -77,10 +83,10 @@ $(document).ready(function(){
     link.data(links)
       .enter().insert("line", "g")
       .attr("class", "link")
-      .attr("y1", function(d) { return d.source.y })
-      .attr("x1", function(d) { return d.source.x })
-      .attr("y2", function(d) { return d.target.y })
-      .attr("x2", function(d) { return d.target.x })
+      .attr("x1", function(d) { return d.source.y })
+      .attr("y1", function(d) { return d.source.x })
+      .attr("x2", function(d) { return d.target.y })
+      .attr("y2", function(d) { return d.target.x })
       .attr("stroke", "black");
   };
 
