@@ -73,6 +73,9 @@ header {
   float: right;
   margin-right: 1em;
   margin-top: 0.6em;
+  @media all and (max-width: $breakpoint-max) {
+    margin-right: 0;
+  }
   ul {
     li {
       margin-left: 1em;
