@@ -34,9 +34,9 @@
         </div>
         <div class="stats">
           <p>
-            <div id="sort_value"><i class="fa fa-thumbs-up"> <%=project.calculate_vote_score%></i><br></div>
-            <div id="sort_value"><i class="fa fa-thumbs-o-up">  <%=project.get_popular_version.calculate_branch_vote_score %></i><br></div>
-            <div id="sort_value"><i class="fa fa-user"> <%= project.total_versions %> </i><br></div>
+            <div class="project_score"><i class="fa fa-thumbs-up"> <%=project.calculate_vote_score%></i><br></div>
+            <div class="highest_voted_version"><i class="fa fa-thumbs-o-up">  <%=project.get_popular_version.calculate_branch_vote_score %></i><br></div>
+            <div class="contributions"><i class="fa fa-user"> <%= project.total_versions %> </i><br></div>
           </p>
         </div>
       <% end %>
