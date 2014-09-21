@@ -1,10 +1,3 @@
-// $(document).ready(function () {
-//   $("li").on("click", function(event){
-//     $("li").removeClass("active");
-//     $(this).addClass("active");
-//   });
-// });
-
 $(document).ready(function() {
   $('ul.tabs li').click(function(){
     var currentTab = $(this).attr('data-tab');
@@ -16,3 +9,4 @@ $(document).ready(function() {
     $("#"+currentTab).addClass('current');
   });
 });
+
