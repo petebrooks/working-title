@@ -1,4 +1,5 @@
 @import "variables";
+@import "mixins";
 
 .top_five_projects {
   float: left;
@@ -20,8 +21,8 @@
     text-decoration: none;
     color: $black ;
     &:hover {
-      color: gray ;
-      font-weight: bold;
+      color: $accent;
+      @include transition(0.5s);
     }
   }
 }
