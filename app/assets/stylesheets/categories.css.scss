@@ -41,7 +41,7 @@
   display: block;
 }
 
-p {
+.top_five_categories p {
   font-size: 1.5rem;
 }
 
@@ -49,7 +49,7 @@ p {
   .top_five_projects{
     width: 100%;
   }
-  p{
+  .top_five_categories p{
     display: none;
   }
 }

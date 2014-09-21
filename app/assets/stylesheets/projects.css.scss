@@ -2,6 +2,14 @@
 
 .category_header {
   height: 100px;
+  // text-align: center;
+  font-size: 70px;
+  font-style: bold;
+  color: $accent;
+  font-family: $font-family-serif;
+  padding: 3%;
+  margin: 0 auto;
+  margin-left: 30%;
 }
 
 
@@ -63,12 +71,13 @@
 
 .project_name {
   font-family: $font-family-cursive;
+  font-size: 20px
 }
 
 .first_version {
   font-family: $font-family-serif;
-  margin-top: 10px;
-  padding: 50px 20px 2px 30px;
+  padding: 25px 10px 2px 30px;
+  font-size: 16px;
 }
 
 .stats {
@@ -86,7 +95,7 @@
 #sort_value {
   width: 100%;
   margin: 10px;
-
+}
 
 .all_projects li, a {
   text-decoration: none;
@@ -107,4 +116,4 @@
 
 .all_projects a {
   text-align: right;
-
+}
