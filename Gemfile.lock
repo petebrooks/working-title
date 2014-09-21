@@ -50,6 +50,10 @@ GEM
     execjs (2.2.1)
     faker (1.2.0)
       i18n (~> 0.5)
+    font-awesome-rails (4.2.0.0)
+      railties (>= 3.2, < 5.0)
+    font-awesome-sass (4.2.0)
+      sass (~> 3.2)
     gon (5.2.0)
       actionpack (>= 2.3.0)
       json
@@ -63,6 +67,8 @@ GEM
     jquery-rails (3.1.2)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
+    jquery-ui-rails (5.0.0)
+      railties (>= 3.2.16)
     json (1.8.1)
     kgio (2.9.2)
     mail (2.5.4)
@@ -171,10 +177,19 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   database_cleaner (~> 1.2.0)
   faker
+<<<<<<< HEAD
   gon
   jbuilder (~> 1.2)
   jquery-rails
   json
+=======
+  font-awesome-rails
+  font-awesome-sass
+  gon
+  jbuilder (~> 1.2)
+  jquery-rails
+  jquery-ui-rails
+>>>>>>> f75ca8c50e1d9bf9e25540755e51fe04d6228408
   pg
   pry
   rails (= 4.0.2)

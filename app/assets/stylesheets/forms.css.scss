@@ -1,0 +1,44 @@
+@import "variables";
+@import "mixins";
+
+.form-container {
+  max-width: 320px;
+  width: 100%;
+  text-align: center;
+  margin: 4em auto 0 auto;
+  background-color: #fff;
+  border: 2px solid $light-grey;
+  border-radius: 5px;
+  padding: 1em;
+}
+
+.form-container input {
+  display: block;
+  width: 100%;
+  margin-top: 0.4em;
+  height: 2.5em;
+  padding: 0.4em;
+}
+
+.form-container input[type=submit] {
+  background: $black;
+  color: $white;
+  border: 0;
+  margin-bottom: 2em;
+}
+
+.form-container input[type=submit]:hover {
+  @include transition(0.5s);
+  background: $accent;
+}
+
+.register-link {
+  margin-top: 1em;
+  display: block;
+  text-decoration: none;
+  color: $black;
+  &:hover {
+    @include transition(0.5s);
+    color: $accent;
+  }
+}

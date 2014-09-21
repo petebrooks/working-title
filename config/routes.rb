@@ -5,13 +5,17 @@ WorkingTitle::Application.routes.draw do
     get "tree", on: :member
     resources :versions, except: [:destroy, :edit, :update]
   end
+
   resources :categories, only: [:index, :show]
+
   resources :votes, only: [:create]
 
   resources :sessions, only: [:new, :create, :destroy]
   match '/signup', to: 'users#new', via: 'get'
   match '/signin', to: 'sessions#new', via: 'get'
   match '/signout', to: 'sessions#destroy', via: 'delete'
+
+  post '/search' => 'search#new'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

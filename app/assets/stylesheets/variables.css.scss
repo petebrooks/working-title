@@ -1,8 +1,16 @@
 //Color Scheme
-$black: #333;
-$white: ghostwhite;
-$accent: tomato;
+$black: #222;
+$dark-grey: lighten( $black, 20% );
+$grey: lighten( $black, 40% );
+$light-grey: lighten( $black, 60% );
+$white: #f7f7f7;
+$accent: #4682B4;
 
 //Typography
 $font-family-serif: 'PT Serif', Garamond, 'Times New Roman', serif;
 $font-family-cursive: 'Petit Formal Script', cursive;
+$font-family-icon: FontAwesome;
+
+//Media Queries
+$breakpoint-min: 650px; 
+$breakpoint-max: $breakpoint-min - 1; 
