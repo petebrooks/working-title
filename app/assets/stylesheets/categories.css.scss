@@ -1,1 +1,55 @@
 @import "variables";
+
+.container {
+  height: 100%;
+}
+
+.top_five_projects {
+  float: left;
+  width: 33.33%;
+  padding: 1%;
+  box-sizing: border-box;
+  min-height: 100%;
+}
+
+.top_five_projects li {
+  margin: 0 0 2% 0;
+}
+
+.top_five_projects p {
+  text-align: center;
+  font-family: $font-family-serif;
+}
+
+.categories {
+  margin: auto 0;
+}
+
+.top_five_projects a {
+  text-decoration: none;
+  color: $black ;
+}
+
+.top_five_projects a:hover {
+  color: gray ;
+  font-weight: bold;
+}
+
+.icons {
+  font-size: 4rem;
+  text-align: center;
+  display: block;
+}
+
+.top_five_categories p {
+  font-size: 1.5rem;
+}
+
+@media (max-width:400px){
+  .top_five_projects{
+    width: 100%;
+  }
+  .top_five_categories p{
+    display: none;
+  }
+}
