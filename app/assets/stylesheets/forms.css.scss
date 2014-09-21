@@ -7,8 +7,8 @@
   text-align: center;
   margin: 4em auto 0 auto;
   background-color: #fff;
-  border: 2px solid $light-grey;
-  border-radius: 5px;
+  border: $border-standard;
+  border-radius: $border-radius;
   padding: 1em;
   input {
     display: block;
