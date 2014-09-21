@@ -7,7 +7,7 @@ $(document).ready(function(){
   var nodeColor = "blue";
   var highlightColor = "red";
 
-  var tree = d3.layout.tree()
+  var tree = d3.layout.cluster()
     .sort(null)
     .size([height, width])
     .children(function(d) {
@@ -23,8 +23,8 @@ $(document).ready(function(){
     .attr('height', height)
     .append("g")
     .attr('width', width)
-    .attr('height', height)
-    .call(d3.behavior.zoom().scaleExtent([1, 8]).on("zoom", zoom));
+    .attr('height', height);
+    // .call(d3.behavior.zoom().scaleExtent([1, 8]).on("zoom", zoom));
 
   function zoom() {
     svg.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
