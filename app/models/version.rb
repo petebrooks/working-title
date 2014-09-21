@@ -9,7 +9,7 @@ class Version < ActiveRecord::Base
 
   validates :project, presence: true
 
-  after_create :create_vote
+  after_create :create_vote, :save_initial_score
 
   def create_vote
     self.votes.create(user: self.contributor, positive: true)
@@ -36,12 +36,22 @@ class Version < ActiveRecord::Base
     self.ancestors << self
   end
 
+  def save_initial_score
+    if self.previous_version == nil
+      self.initial_vote_score = 0
+    else
+      self.initial_vote_score = self.previous_version.calculate_branch_vote_score
+    end
+    self.save
+  end
+
   def calculate_branch_vote_score
-    branch.map(&:calculate_version_vote_score).reduce(:+)
+    self.initial_vote_score + self.calculate_version_vote_score
   end
 
   def calculate_version_vote_score
     self.votes.where(positive: true).count - self.votes.where(positive: false).count
   end
+
 
 end
