@@ -10,12 +10,14 @@
     <%= @category.name.pluralize %></i>
   </div>
   <div class="sort">
+    <a href="#">
     <div class="sort_icon"><i class="fa fa-sort"></i></div>
     <div class="sort_fields">
-        <div id="sort_field" class="project_score"> <i class="fa fa-thumbs-up"> Project Score</i></div>
-        <div id="sort_field" class="highest_voted_version"> <i class="fa fa-thumbs-o-up"> Score of Highest Voted Version</i></div>
-        <div id="sort_field" class="contributions"> <i class="fa fa-user"> Number of Contributions</i></div>
+        <div class="sort_field" id="project_score"> <i class="fa fa-thumbs-up"> Project Score</i></div>
+        <div class="sort_field" id="highest_voted_version"> <i class="fa fa-thumbs-o-up"> Score of Highest Voted Version</i></div>
+        <div class="sort_field" id="contributions"> <i class="fa fa-user"> Number of Contributions</i></div>
     </div>
+  </a>
   </div>
 
   <div class="all_category_projects">
