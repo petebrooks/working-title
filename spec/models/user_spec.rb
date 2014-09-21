@@ -34,4 +34,13 @@ describe User do
     user = User.create!(name: name, email: Faker::Internet.email(name), password: "password", password_confirmation: "password")
     expect(user).to have_secure_password
   end
+
+  describe "#capitalize_full_name" do
+
+    it "should capitalize a full name" do
+      name = 'ricky bobby'
+      user = User.create!(name: name, email: Faker::Internet.email(name), password: "password", password_confirmation: "password")
+      expect(user.capitalize_full_name).to eq "Ricky Bobby"
+    end
+  end
 end
