@@ -27,11 +27,14 @@ gem 'jquery-ui-rails'
 #gem 'turbolinks'
 
 gem "font-awesome-rails"
+gem "font-awesome-sass"
 
 gem "gon"
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
+
+gem 'font-awesome-sass'
 
 group :test, :development do
 	gem 'faker'
