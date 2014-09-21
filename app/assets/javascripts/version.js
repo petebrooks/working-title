@@ -22,7 +22,7 @@ $(document).ready(function() {
     $(this).after().after('<input id="add_contribution" placeholder="Add new text here"> </input>');
   });
 
-  branch_div.on("keyup", "input#add_contribution", function(e){
+  branch_div.on("keyup", "input#add_contribution",g function(e){
     var contribution = this.value;
     var key = e.which;
     var version_id = branch_div.attr("versionid");
