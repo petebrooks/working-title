@@ -21,6 +21,7 @@ $(document).ready(function(){
   .append("svg")
   .attr('width', width)
   .attr('height', height)
+  .attr('preserveAspectRatio', 'xMidyMid meet')
   .append("g")
   .attr('width', width)
   .attr('height', height);
