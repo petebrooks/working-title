@@ -25,13 +25,15 @@ $(document).ready(function(){
     .attr('width', width)
     .attr('height', height);
 
+  var node = svg.selectAll('.node');
+  var link = svg.selectAll('.link');
+
   var i = 0;
-  root = treeData;
+  var root = treeData;
 
-  update(root);
+  update();
 
-  function update(source) {
-
+  function update() {
     var nodes = tree.nodes(root);
     var links = tree.links(nodes);
 
@@ -39,12 +41,8 @@ $(document).ready(function(){
       d.y = d.depth * 40 + 10;
     });
 
-    var node = svg.selectAll('g.node')
-      .data(nodes, function(d) {
-        return d.nodeid || (d.nodeid = i++);
-      });
-
-    var nodeEnter = node.enter().append('g')
+    var nodeEnter = node.data(nodes)
+      .enter().append('g')
       .attr('class', 'node')
       .attr('id', function(d) { return d.nodeid; })
       .attr('transform', function(d) {
@@ -60,34 +58,21 @@ $(document).ready(function(){
       });
 
     nodeEnter.append('circle')
-      // .attr('cx', function(d){ return d.y; })
-      // .attr('cy', function(d){ return d.x; })
       .attr("r", 10)
       .style("fill", nodeColor);
 
-
-    // nodeEnter.append("text")
-    //   .attr("x", function(d) {
-    //     return d.children || d._children ? -13 : 13;
-    //   })
-    //   .attr("dy", "0.35em")
-    //   .attr("text-anchor", function(d) {
-    //     return d.children || d._children ? "end" : "start";
-    //   })
-    //   .text(function(d) { return d.contribution; })
-    //   .style("fill-opacity", 1);
-
-    var link = svg.selectAll("line.link")
-      .data(links, function(d) { return d.target.id });
-
-    link.enter().insert("line", "g")
+    link.data(links)
+      .enter().insert("line", "g")
       .attr("class", "link")
-      // .attr("d", diagonal);
-      .attr("y1", function(d) { return d.source.x })
       .attr("x1", function(d) { return d.source.y })
-      .attr("y2", function(d) { return d.target.x })
+      .attr("y1", function(d) { return d.source.x })
       .attr("x2", function(d) { return d.target.y })
+      .attr("y2", function(d) { return d.target.x })
       .attr("stroke", "black");
-  }
+  };
+
+  function tick() {
+
+  };
 
 });
