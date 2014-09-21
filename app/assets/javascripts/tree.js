@@ -1,29 +1,31 @@
 $(document).ready(function(){
 
   var treeData = $('.tree_data').data('data');
-  var height = 500;
-  var width = 1000;
 
   var nodeColor = "blue";
   var highlightColor = "red";
 
+  var diameter = 1000;
+
   var tree = d3.layout.tree()
     .sort(null)
-    .size([height, width])
+    .size([diameter / 2, diameter / 4])
     .children(function(d) {
       return (!d.children || d.children.length === 0) ? null : d.children;
-    });
+    })
+    .separation(function(a, b) { return (a.parent==b.parent ? 1 : 2) / a.depth; });
 
-  var diagonal = d3.svg.diagonal()
-    .projection(function(d) { return [d.x, d.y]; });
+  var diagonal = d3.svg.diagonal.radial()
+    .projection(function(d) { return [d.y, d.x / 180 * Math.PI]; });
 
   var svg = d3.select("body div.tree")
     .append("svg")
-    .attr('width', width)
-    .attr('height', height)
+    .attr('width', diameter)
+    .attr('height', diameter)
     .append("g")
-    .attr('width', width)
-    .attr('height', height);
+    .attr("transform", "translate(" + diameter / 2 + "," + diameter / 2 + ")");
+    // .attr('width', width)
+    // .attr('height', height);
     // .call(d3.behavior.zoom().scaleExtent([1, 8]).on("zoom", zoom));
 
   function zoom() {
@@ -59,7 +61,7 @@ $(document).ready(function(){
       .attr('class', 'node')
       .attr('id', function(d) { return d.nodeid; })
       .attr('transform', function(d) {
-        return 'translate(' + d.x + ',' + d.y + ')';
+        return 'rotate(' + (d.x -90) + ')translate(' + d.y + ')';
       })
       .on('mouseover', function(d) {
         d3.select(this).insert("text")
@@ -75,13 +77,13 @@ $(document).ready(function(){
       .style("fill", nodeColor);
 
     link.data(links)
-      .enter().insert("line", "g")
+      .enter().insert("path", "g")
       .attr("class", "link")
-      .attr("y1", function(d) { return d.source.y })
-      .attr("x1", function(d) { return d.source.x })
-      .attr("y2", function(d) { return d.target.y })
-      .attr("x2", function(d) { return d.target.x })
-      .attr("stroke", "black");
+      .attr("d", diagonal);
+      // .attr("y1", function(d) { return d.source.y })
+      // .attr("x1", function(d) { return d.source.x })
+      // .attr("y2", function(d) { return d.target.y })
+      // .attr("x2", function(d) { return d.target.x })
   };
 
   function tick() {
