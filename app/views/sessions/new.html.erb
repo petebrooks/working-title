@@ -6,7 +6,7 @@
       <%= text_field_tag(:email, nil, placeholder: "Email") %>
       <%= password_field_tag(:password, nil, placeholder: "Password") %>
       <%= submit_tag("Login") %>
+      <%= link_to "Register", new_user_path, class: "register-link" %>
     <% end %>
-    <%= link_to "Register", new_user_path, class: "register-link" %>
   </div>
 </div>
