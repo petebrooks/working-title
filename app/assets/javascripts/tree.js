@@ -37,6 +37,14 @@ $(document).ready(function(){
     var nodes = tree.nodes(root);
     var links = tree.links(nodes);
 
+    var voteRange = d3.extent(nodes.map(function(d) {
+      return d.voteScore;
+    }));
+
+    var voteScale = d3.scale.linear()
+      .domain(voteRange)
+      .range([2, 18]);
+
     nodes.forEach(function(d){
       d.y = d.depth * 40 + 10;
     });
@@ -58,7 +66,7 @@ $(document).ready(function(){
       });
 
     nodeEnter.append('circle')
-      .attr("r", 10)
+      .attr("r", function(d) { return voteScale(d.voteScore)})
       .style("fill", nodeColor);
 
     link.data(links)
