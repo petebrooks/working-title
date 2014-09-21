@@ -15,7 +15,7 @@ $(document).ready(function(){
     });
 
   var diagonal = d3.svg.diagonal()
-    .projection(function(d) { return [d.y, d.x]; });
+    .projection(function(d) { return [d.x, d.y]; });
 
   var svg = d3.select("body div.tree")
     .append("svg")
@@ -51,7 +51,7 @@ $(document).ready(function(){
       .range([2, 18]);
 
     nodes.forEach(function(d){
-      d.y = d.depth * 40 + 10;
+      // d.x = d.depth * 40 + 10;
     });
 
     var nodeEnter = node.data(nodes)
@@ -59,7 +59,7 @@ $(document).ready(function(){
       .attr('class', 'node')
       .attr('id', function(d) { return d.nodeid; })
       .attr('transform', function(d) {
-        return 'translate(' + d.y + ',' + d.x + ')';
+        return 'translate(' + d.x + ',' + d.y + ')';
       })
       .on('mouseover', function(d) {
         d3.select(this).insert("text")
@@ -77,10 +77,10 @@ $(document).ready(function(){
     link.data(links)
       .enter().insert("line", "g")
       .attr("class", "link")
-      .attr("x1", function(d) { return d.source.y })
-      .attr("y1", function(d) { return d.source.x })
-      .attr("x2", function(d) { return d.target.y })
-      .attr("y2", function(d) { return d.target.x })
+      .attr("y1", function(d) { return d.source.y })
+      .attr("x1", function(d) { return d.source.x })
+      .attr("y2", function(d) { return d.target.y })
+      .attr("x2", function(d) { return d.target.x })
       .attr("stroke", "black");
   };
 
