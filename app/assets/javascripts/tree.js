@@ -50,6 +50,11 @@ $(document).ready(function(){
     node = node.data(nodes);
     link = link.data(links);
 
+    node.forEach(function(d){
+      d.nodeid = i;
+      i++;
+    });
+
     var voteRange = d3.extent(nodes.map(function(d) {
       return d.voteScore;
     }));
@@ -59,16 +64,18 @@ $(document).ready(function(){
       .range([2, 18]);
 
     node.enter()
-      .append('g')
-      .attr('class', 'node')
-      .attr('transform', function(d) {
-        return 'translate(' + 50 + ',' + d.x + ');' })
       .append('circle')
+      .attr('class', 'node')
+      .attr('id', function(d) { return d.nodeid; })
+      .attr('cx', function(d) { return d.y; })
+      .attr('cy', function(d) { return d.x; })
       .attr("r", function(d) { return voteScale(d.voteScore) })
       .style("fill", nodeColor);
 
+
+
     link.enter()
-      .insert("line", "g")
+      .insert("line", ".node")
       .attr("class", "link")
       .attr("x1", function(d) { return d.source.y })
       .attr("y1", function(d) { return d.source.x })
@@ -83,9 +90,7 @@ $(document).ready(function(){
         .attr("y1", function(d) { return d.source.x })
         .attr("x2", function(d) { return d.target.y })
         .attr("y2", function(d) { return d.target.x });
-    node.attr("transform", function(d) {
-      return "translate(" + 50, "," + d.x + ");"
-    });
+    node.attr('cx', function(d) { return d.y; })
+        .attr('cy', function(d) { return d.x; });
   };
-
 });
