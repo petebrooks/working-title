@@ -33,6 +33,8 @@
 
   .tab-content.current {
     display:inherit;
+    list-style: none;
+    line-height: 1.5rem;
   }
 
   h3 {
@@ -40,7 +42,7 @@
   }
 
   span {
-    line-height: 2commitrem;
+    line-height: 2rem;
   }
 
 
