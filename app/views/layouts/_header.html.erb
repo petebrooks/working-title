@@ -8,9 +8,9 @@
     <div class="menu-container clearfix">
       <nav id="pages-nav">
         <ul>
-          <li><%= link_to "Write", new_project_path %></li>
-          <li><%= link_to "Collaborate", projects_path %></li>
-          <li><%= link_to "Explore", categories_path %></li>
+          <li id="write-link"><%= link_to '<i class="fa fa-pencil-square-o"></i><span class="nav-text">Write</span>'.html_safe, new_project_path %></li>
+          <li id="collaborate-link"><%= link_to "Collaborate", projects_path %></li>
+          <li id="explore-link"><%= link_to "Explore", categories_path %></li>
         </ul>
       </nav>
       <div id="search">
@@ -22,10 +22,10 @@
       <nav id="session-nav">
         <ul>
           <% if current_user %>
-            <li><%= link_to "Sign Out", signout_path, method: :delete %></li>
-            <li><%= link_to "Profile", user_path(current_user) %></li>
+            <li><%= link_to '<i class="fa fa-user"></i>'.html_safe, user_path(current_user) %></li>
+            <li><%= link_to '<i class="fa fa-sign-out"></i>'.html_safe, signout_path, method: :delete %></li>
           <% else %>
-            <li><%= link_to "Login", signin_path %></li>
+            <li><%= link_to '<i class="fa fa-sign-in"></i>'.html_safe, signin_path %></li>
           <% end %>
         </ul>
       </nav>

@@ -10,3 +10,7 @@ $accent: #4682B4;
 $font-family-serif: 'PT Serif', Garamond, 'Times New Roman', serif;
 $font-family-cursive: 'Petit Formal Script', cursive;
 $font-family-icon: FontAwesome;
+
+//Media Queries
+$breakpoint-min: 650px; 
+$breakpoint-max: $breakpoint-min - 1; 
