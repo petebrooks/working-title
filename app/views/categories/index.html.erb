@@ -1,31 +1,28 @@
 <div class="container">
-    <% @categories.each do |cat| %>
-
-  <div class = "top_five_projects">
-    <% if "#{cat.name}" == "Story" %>
-      <%= link_to category_path(cat) do %>
-        <span class = "icons"><i class="fa fa-pencil-square-o"></i></span>
-      <% end %>
-        <p><%= cat.name %></p>
-    <% elsif "#{cat.name}" == "Poem" %>
+  <% @categories.each do |cat| %>
+    <div class = "top_five_projects">
+      <% if "#{cat.name}" == "Story" %>
+        <%= link_to category_path(cat) do %>
+          <span class = "icons"><i class="fa fa-book"></i></span>
+          <p><%= pluralize(2, cat.name).gsub(/\d+\s/, "") %></p>
+        <% end %>
+      <% elsif "#{cat.name}" == "Poem" %>
         <%= link_to category_path(cat) do %>
           <span class = "icons"><i class="fa fa-bars"></i></span>
+          <p><%= pluralize(2, cat.name).gsub(/\d+\s/, "") %></p>
         <% end %>
-        <p><%= cat.name %></p>
-    <% else %>
+      <% else %>
         <%= link_to category_path(cat) do %>
           <span class = "icons"><i class="fa fa-music"></i></span>
+          <p><%= pluralize(2, cat.name).gsub(/\d+\s/, "") %></p>
         <% end %>
-        <p><%= cat.name %></p>
-    <% end %>
-          <ol>
-            <span>Top 5:</span><br><br>
-            <%  cat.get_top_five_projects.each do |proj| %>
-              <li><%= link_to  "#{proj.name}", project_path(proj) %></li>
-            <% end %>
-          </ol>
-  </div>
-    <% end %>
+      <% end %>
+      <ol>
+        <span>Top 5:</span><br><br>
+        <%  cat.get_top_five_projects.each do |proj| %>
+          <li><%= link_to  "#{proj.name}", project_path(proj) %></li>
+        <% end %>
+      </ol>
+    </div>
+  <% end %>
 </div>
-
-
