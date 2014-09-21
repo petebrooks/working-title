@@ -1,7 +1,8 @@
 <div class = "container">
   <div class = "profile">
     <% if current_user == @user %>
-    <h2><%= @user.name.capitalize %></h2>
+    <%= image_tag @user.gravatar_url(default: image_url("default-icon.png")), class: "profile-photo" %>
+    <h2 class="page-title"><%= @user.name %></h2>
       <ul class="tabs">
         <li class="tab-link current" data-tab="tab-1">Your Projects</a></li>
         <li class="tab-link" data-tab="tab-2">Your Contributions</a></li>
