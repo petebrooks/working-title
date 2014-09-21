@@ -13,6 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require d3.min
-//= require jquery-ui
 //= require jquery.qtip.min
 //= require_tree .

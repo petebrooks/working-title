@@ -177,13 +177,13 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   database_cleaner (~> 1.2.0)
   faker
-  json
   font-awesome-rails
   font-awesome-sass
   gon
   jbuilder (~> 1.2)
   jquery-rails
   jquery-ui-rails
+  json
   pg
   pry
   rails (= 4.0.2)

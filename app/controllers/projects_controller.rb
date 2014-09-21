@@ -25,7 +25,7 @@ class ProjectsController < ApplicationController
 
   def tree
     @project = Project.find(params[:id])
-    gon.tree_data = @project.create_tree
+    @tree_data = @project.create_tree
   end
 
   private

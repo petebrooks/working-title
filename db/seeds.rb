@@ -6,15 +6,15 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-# categories = ['Story', 'Song', 'Poem']
-# categories.each do |category|
-#   Category.create!(name: category)
-# end
+categories = ['Story', 'Song', 'Poem']
+categories.each do |category|
+  Category.create!(name: category)
+end
 
-# 5.times do
-#   name = Faker::Name.name
-#   User.create!(name: name, email: Faker::Internet.email(name), password: "password", password_confirmation: "password")
-# end
+5.times do
+  name = Faker::Name.name
+  User.create!(name: name, email: Faker::Internet.email(name), password: "password", password_confirmation: "password")
+end
 
 User.find_each do |user|
   user.projects.create!(name: Faker::Lorem.sentence, category_id: rand(1..3), initial_text: Faker::Company.catch_phrase)

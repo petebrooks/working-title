@@ -1,5 +1,5 @@
 <!-- <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script> -->
-<%= include_gon %>
-<div class="container">
+<%= content_tag :div, class: "tree_data", data: {data: @tree_data}  do%>
+<% end %>
+<div class="tree">
 </div>
-<%= javascript_include_tag "tree" %>

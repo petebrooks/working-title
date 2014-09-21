@@ -49,11 +49,6 @@ class Project < ActiveRecord::Base
     ActiveSupport::JSON.encode(self.versions.first.create_tree_hash)
   end
 
-  def to_json
-    { name: self.name,
-      vote}
-  end
-
   def total_versions
     self.versions.count
   end
