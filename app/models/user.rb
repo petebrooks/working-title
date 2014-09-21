@@ -5,10 +5,15 @@ class User < ActiveRecord::Base
 
 	has_secure_password
 
-	include Gravtastic
-	gravtastic
+  def unique_projects
+    self.versions.map(&:project).uniq
+  end
 
-	def unique_projects
-		self.versions.map(&:project).uniq
-	end
+  def capitalize_full_name
+    self.name.split.map(&:capitalize).join(" ")
+  end
+
+  include Gravtastic
+  gravtastic
+
 end

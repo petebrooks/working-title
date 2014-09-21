@@ -1,12 +1,14 @@
 <div class = "container">
   <div class = "profile">
     <% if current_user == @user %>
+    <h2><%= @user.capitalize_full_name %></h2>
     <%= image_tag @user.gravatar_url(default: image_url("default-icon.png")), class: "profile-photo" %>
-    <h2 class="page-title"><%= @user.name %></h2>
+
+    <h2 class="page-title"><%= @user.capitalize_full_name %></h2>
       <ul class="tabs">
-        <li class="tab-link current" data-tab="tab-1">Your Projects</a></li>
-        <li class="tab-link" data-tab="tab-2">Your Contributions</a></li>
-        <li class="tab-link" data-tab="tab-3">Account</a></li>
+        <li class="tab-link current" data-tab="tab-1"><p>Projects</p></li>
+        <li class="tab-link" data-tab="tab-2"><p>Contributions</p></li>
+        <li class="tab-link" data-tab="tab-3"><p>Account</p></li>
       </ul>
 
       <div class="tab-content current" id="tab-1">
@@ -20,7 +22,7 @@
         <h3>Projects You Contributed To:</h3>
           <% @user.unique_projects.each do |project| %>
             <p><%= link_to "#{project.name}", project_path(project) %></p>
-                <strong>Versions:</strong>
+                <strong>Versions:</strong><br><br>
                 <% project.versions_by(@user).each do |version| %>
                   <li><%= link_to "#{version.contribution}", project_version_path(project, version) %></li>
                   <% end %>
