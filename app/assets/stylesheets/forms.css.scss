@@ -10,6 +10,9 @@
   border: $border-standard;
   border-radius: $border-radius;
   padding: 1em;
+  &.wide {
+    max-width: 600px;
+  }
   input {
     display: block;
     width: 100%;
@@ -25,6 +28,16 @@
         @include transition(0.5s);
         background: $accent;
       }
+    }
+  }
+  select {
+    border-radius: 0;
+    height: 2.5em;
+    width: 100%;
+    border-color: $light-grey;
+    background-color: #fff;
+    option {
+      color: $light-grey;
     }
   }
 }
