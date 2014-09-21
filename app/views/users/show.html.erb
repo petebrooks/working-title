@@ -2,6 +2,9 @@
   <div class = "profile">
     <% if current_user == @user %>
     <h2><%= @user.capitalize_full_name %></h2>
+    <%= image_tag @user.gravatar_url(default: image_url("default-icon.png")), class: "profile-photo" %>
+
+    <h2 class="page-title"><%= @user.capitalize_full_name %></h2>
       <ul class="tabs">
         <li class="tab-link current" data-tab="tab-1"><p>Projects</p></li>
         <li class="tab-link" data-tab="tab-2"><p>Contributions</p></li>

@@ -59,6 +59,7 @@ GEM
       json
       multi_json
       request_store (>= 1.0.5)
+    gravtastic (3.2.6)
     hike (1.2.3)
     i18n (0.6.11)
     jbuilder (1.5.3)
@@ -180,6 +181,7 @@ DEPENDENCIES
   font-awesome-rails
   font-awesome-sass
   gon
+  gravtastic
   jbuilder (~> 1.2)
   jquery-rails
   jquery-ui-rails

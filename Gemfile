@@ -29,6 +29,8 @@ gem 'jquery-ui-rails'
 gem "font-awesome-rails"
 gem "font-awesome-sass"
 
+gem 'gravtastic'
+
 gem "gon"
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
