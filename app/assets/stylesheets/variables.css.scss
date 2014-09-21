@@ -8,8 +8,13 @@ $accent: #4682B4;
 
 //Typography
 $font-family-serif: 'PT Serif', Garamond, 'Times New Roman', serif;
+$font-family-sans-serif: 'Helventica Neue', Helvetica, Arial, sans-serif;
 $font-family-cursive: 'Petit Formal Script', cursive;
 $font-family-icon: FontAwesome;
+
+//Layout
+$border-radius: 5px;
+$border-standard: 2px solid $light-grey;
 
 //Media Queries
 $breakpoint-min: 650px; 

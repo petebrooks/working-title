@@ -2,7 +2,6 @@
 
 .category_header {
   height: 100px;
-  // text-align: center;
   font-size: 70px;
   font-style: bold;
   color: $accent;
@@ -19,12 +18,12 @@
   height: 40px;
   border-bottom: solid #ddd 1px;
   border-top: solid #ddd 1px;
+  a {
+    text-decoration: none;
+    color: $black;
+  }
 }
 
-.sort a {
-  text-decoration: none;
-  color: $black;
-}
 .sort_icon {
   float: left;
 }
@@ -34,8 +33,6 @@
   float: left;
   width: 80%;
   margin-left: 15%;
-  // margin-right: 10%;
-  // background-color: red;
 }
 
 .sort_field {
@@ -47,13 +44,16 @@
 
 .project_box {
   margin: 1em auto 0 auto;
-  // width: 500px;
   width: 100%;
   height: 110px;
-  border-radius: 20px;
-  border: solid 1px #ddd;
+  border-radius: $border-radius;
+  border: $border-standard;
   background-color: #fff;
-  padding: 2px 20px 2px 30px;
+  padding: 0 0 0 1.5em;
+  a {
+    text-decoration: none;
+    color: $black;
+  }
 }
 
 .project_link {
@@ -63,11 +63,6 @@
   float: left;
 }
 
-.project_box a {
-  text-decoration: none;
-  color: $black;
-}
-
 .project_name {
   font-family: $font-family-cursive;
   font-size: 20px
@@ -75,34 +70,33 @@
 
 .all_projects {
   margin-top: 3%;
-}
-
-.all_projects h3 {
-  font-family: $font-family-cursive;
-  text-align: center;
+  h3 {
+    font-family: $font-family-cursive;
+    text-align: center;
+  }
+  a {
+    text-align: right;
+  }
+  li, a {
+    text-decoration: none;
+    list-style-type: none;
+    color: $black ;
+    text-align: center;
+    line-height: 1.5;
+  }
+  li {
+    a {
+      &:hover {
+        color: black;
+        font-weight: bold;
+      }
+    }
+  }
 }
 
 .first_version {
   font-family: $font-family-serif;
   margin-top: 10px;
-  padding: 50px 20px 2px 30px;
-}
-
-.all_projects li, a {
-  text-decoration: none;
-  list-style-type: none;
-  color: $black ;
-  text-align: center;
-  line-height: 1.5;
-}
-
-.all_projects li a:hover {
-  color: black;
-  font-weight: bold;
-}
-
-.first_version {
-  font-family: $font-family-serif;
   padding: 25px 10px 2px 30px;
   font-size: 16px;
 }
@@ -110,39 +104,17 @@
 .stats {
   width: 5%;
   font-size: 12px;
-  display: inline;
+  display: inline-block;
+  height: 100%;
   float: right;
   text-align: left;
-  margin-right: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  // background-color: yellow;
-}
-
-.project_score, .highest_voted_version, .contributions {
-  width: 100%;
-  margin: 10px;
-}
-
-.all_projects li, a {
-  text-decoration: none;
-  list-style-type: none;
-  color: $black ;
-  text-align: center;
-}
-
-.all_projects li a:hover {
-  color: black;
-  font-weight: bold;
-}
-
-.all_projects h3 {
-  font-family: $font-family-cursive;
-  text-align: center;
-}
-
-.all_projects a {
-  text-align: right;
+  div {
+    width: 100%;
+    height: 33%;
+    display: block;
+    font-size: 1.3em;
+    padding-top: 0.5em;
+  }
 }
 
 @media (max-width:400px){
