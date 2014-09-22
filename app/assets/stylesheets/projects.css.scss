@@ -14,7 +14,7 @@
 .sort {
   margin-top: 30px;
   width: 100%;
-  padding: 10px;
+  padding: 1%;
   height: 40px;
   border-bottom: solid #ddd 1px;
   border-top: solid #ddd 1px;
@@ -29,6 +29,8 @@
 }
 
 .sort_fields {
+  @media all and (max-width: 900px) {
+  }
   margin: 0 auto;
   float: left;
   width: 80%;
@@ -40,6 +42,12 @@
   font-size: 14px;
   padding: 0.5% 5% 0.5% 5%;
   margin: 0 auto;
+}
+
+.sort_value_text {
+  @media all and (max-width: 900px) {
+    display: none;
+  }
 }
 
 .project_box {

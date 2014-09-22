@@ -7,6 +7,11 @@
   border: $border-standard;
   background-color: #fff;
   padding: .75em 2em;
+  @media all and (max-width: $breakpoint-max) {
+    width: 100%;
+    min-height: 0px;
+    padding: .75em .75em;
+  };
   a {
     text-decoration: none;
     color: $black;
@@ -24,7 +29,11 @@
   min-height: 350px;
   .project_name {
     font-size: 35px;
+    @media all and (max-width: $breakpoint-max) {
+      font-size: 25px;
+    }
   }
+
 }
 #project_box_2 {
   width: 37%;
@@ -33,12 +42,19 @@
   margin-left: 3%;
   .project_name {
     font-size: 25px;
+    @media all and (max-width: $breakpoint-max) {
+      font-size: 15px;
+    }
   }
 }
 
 #project_box_3 {
   width: 45%;
   min-height: 350px;
+  @media all and (max-width: $breakpoint-max) {
+    width: 100%;
+    min-height: 0px;
+  }
   .project_name {
     font-size: 30px;
   }
@@ -48,6 +64,10 @@
   margin-left: 5%;
   width: 50%;
   min-height: 150px;
+  font-size: 25px;
+  @media all and (max-width: $breakpoint-max) {
+    margin-left: 0%;
+  }
   .project_name {
     font-size: 17px;
   }
@@ -57,8 +77,16 @@
   width: 30%;
   margin-left: 2%;
   min-height: 150px;
+  @media all and (max-width: $breakpoint-max) {
+    margin-left: 0%;
+    width: 50%;
+    min-height: 0%;
+  }
   .project_name, .project_initiator{
     font-size: 15px;
+    @media all and (max-width: $breakpoint-max) {
+      font-size: 10px
+    }
   }
 }
 
@@ -66,8 +94,16 @@
   width: 20%;
   margin-left: 2%;
   min-height: 190px;
+  @media all and (max-width: $breakpoint-max) {
+    margin-left: 0%;
+    width: 50%;
+    min-height: 0%;
+  }
   .project_name, .project_initiator{
     font-size: 13px;
+    @media all and (max-width: $breakpoint-max) {
+      font-size: 10px
+    }
   }
 }
 
