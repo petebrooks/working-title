@@ -131,6 +131,26 @@
   text-align: center;
 }
 
+div.half {
+  width: 50%;
+}
+
+div.tree {
+  float: left;
+}
+
+div.tree_text {
+  float: right;
+  padding-top: 1rem;
+  #current {
+    background-color: $accent;
+  }
+  p {
+  padding: 0;
+  margin: 0;
+  }
+}
+
 @media (max-width:400px){
   .all_projects{
     width: 100%;

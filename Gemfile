@@ -31,10 +31,12 @@ gem "font-awesome-sass"
 
 gem 'gravtastic'
 
-gem "gon"
+# gem "gon"
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
+
+gem 'json'
 
 group :test, :development do
 	gem 'faker'

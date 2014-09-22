@@ -1,3 +1,5 @@
+require 'json'
+
 class Version < ActiveRecord::Base
   belongs_to :project
   belongs_to :contributor, class_name: "User"
@@ -53,5 +55,12 @@ class Version < ActiveRecord::Base
     self.votes.where(positive: true).count - self.votes.where(positive: false).count
   end
 
+  def create_tree_hash
+    { id: self.id,
+      contribution: self.contribution,
+      text: ancestors_text,
+      voteScore: calculate_branch_vote_score,
+      children: self.children.map(&:create_tree_hash) }
+  end
 
 end

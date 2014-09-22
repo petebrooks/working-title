@@ -23,6 +23,11 @@ class ProjectsController < ApplicationController
     redirect_to project_version_path(@project, @popular_version) unless @popular_version == nil
   end
 
+  def tree
+    @project = Project.find(params[:id])
+    @tree_data = @project.create_tree
+  end
+
   private
   def project_params
     params.require(:project).permit(:name, :category_id, :initial_text)
