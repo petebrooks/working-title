@@ -1,11 +1,12 @@
 $(document).ready(function() {
 
-  var branch_div = $("#branch_text");
+  var branch_text = $("#branch_text");
   var children = $("div#children");
 
-  children.slideUp();
+  // children.slideUp();
 
   $("i#expand_branch").click(function(){
+    console.log("click");
     $(this).hide();
     $("i#collapse_branch").show();
     children.slideDown();
@@ -17,16 +18,16 @@ $(document).ready(function() {
     children.slideUp();
   });
 
-  branch_div.on("click", "#contribution", function(){
+  branch_text.on("click", "#contribution", function(){
     $("input#add_contribution").remove();
     $(this).after().after('<input id="add_contribution" placeholder="Add new text here"> </input>');
   });
 
-  branch_div.on("keyup", "input#add_contribution", function(e){
+  branch_text.on("keyup", "input#add_contribution", function(e){
     var contribution = this.value;
     var key = e.which;
-    var version_id = branch_div.attr("versionid");
-    var project_id = branch_div.attr("projectid");
+    var version_id = branch_text.attr("versionid");
+    var project_id = branch_text.attr("projectid");
 
     if(key == 13) {
       $.post("/projects/" + project_id + "/versions", {

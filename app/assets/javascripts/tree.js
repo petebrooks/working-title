@@ -1,5 +1,4 @@
 $(document).ready(function(){
-
 	var treeData = $('.tree_data').data('data');
 	var height = 500;
 	var width = 300;

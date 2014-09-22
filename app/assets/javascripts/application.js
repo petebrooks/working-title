@@ -15,3 +15,4 @@
 //= require d3.min
 //= require jquery.qtip.min
 //= require_tree .
+//= stub tree

@@ -1,13 +1,6 @@
 @import "variables";
 @import "mixins";
 
-/*#version_children  {
-  display: none;
-  background-color: yellow;
-  margin-left: 50px;
-  display: inline;
-}*/
-
 #branch_text {
   width: 80%;
   margin: 0 auto;
@@ -82,12 +75,14 @@
   }
 }
 
-#children_container {
-  display: none;
+div#children_container {
+  display: block;
+    width: 80%;
+  margin: 0 auto;
 }
 
 div#children {
-  display: inline;
+  display: none;
   margin-left: 15px;
 }
 

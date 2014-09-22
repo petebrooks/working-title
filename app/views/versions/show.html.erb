@@ -5,37 +5,37 @@
 
 
   <div class="controls clearfix">
-  <% unless @version.previous_version == nil %>
+    <% unless @version.previous_version == nil %>
     <div class="back-links">
-  <%= link_to '<i class="fa fa-backward"></i>Rewind'.html_safe, project_version_path(@version.project, @version.previous_version) %>
-  <%= link_to '<i class="fa fa-fast-backward"></i>Back to Original'.html_safe, project_version_path(@version.project, @version.project.versions.first) %>
-</div>
-  <% end %>
-  <%= render 'votes/form_versions' %>
-</div>
+      <%= link_to '<i class="fa fa-backward"></i>Rewind'.html_safe, project_version_path(@version.project, @version.previous_version) %>
+      <%= link_to '<i class="fa fa-fast-backward"></i>Back to Original'.html_safe, project_version_path(@version.project, @version.project.versions.first) %>
+    </div>
+    <% end %>
+    <%= render 'votes/form_versions' %>
+  </div>
 
   <div id="branch_text" versionid="<%= @version.id %>" projectid="<%= @version.project_id %>">
-      <% @version.branch.each do |version| %>
-        <% if @version.project.category.name == "story" %>
-          <span id="contribution"><%= version.contribution %></span>
-        <% else %>
-          <span id="contribution" class="clearfix"><%= version.contribution %></span>
-        <% end %>
-        <span class="hidden">Added by <%= version.contributor.name %> on <%= version.updated_at.strftime("%b %e, %Y") %></span>
-      <% end %>
+    <% @version.branch.each do |version| %>
+    <% if @version.project.category.name == "story" %>
+    <span id="contribution"><%= version.contribution %></span>
+    <% else %>
+    <span id="contribution" class="clearfix"><%= version.contribution %></span>
+    <% end %>
+    <span class="hidden">Added by <%= version.contributor.name %> on <%= version.updated_at.strftime("%b %e, %Y") %></span>
+    <% end %>
   </div>
 
   <div id="children_container" class="clearfix">
-      <span>
-        <%= fa_icon "plus-circle", id:"expand_branch" %>
-        <%= fa_icon "minus-circle", id:"collapse_branch" %>
-      </span>
-      <div id="children"
+  <span>
+    <%= fa_icon "plus-circle", id:"expand_branch" %>
+    <%= fa_icon "minus-circle", id:"collapse_branch" %>
+  </span>
+    <div id="children"
     <% @version.children.each do |child| %>
     <p><%= link_to "#{child.contribution}", project_version_path(child.project, child) %></p>
     <% end %>
   </div>
-  </div>
+</div>
 
 </div>
 </div>
