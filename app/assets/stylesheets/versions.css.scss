@@ -1,4 +1,5 @@
 @import "variables";
+@import "mixins";
 
 /*#version_children  {
   display: none;
@@ -48,6 +49,35 @@
       font-size: 0.7em;
       margin-top: 0.3em;
       margin-right: 0.5em;
+    }
+  }
+}
+
+.back-links {
+  display: inline-block;
+  float: left;
+}
+
+.vote-container {
+  display: inline-block;
+  height: 100%;
+  float: right;
+  .score {
+    text-align: center;
+    &.padded {
+      padding-top: 1em;
+    }
+  }
+}
+
+.new_vote {
+  button {
+    background-color: transparent;
+    border: 0;
+    color: $black;
+    &:hover {
+      @include transition(0.5s);
+      color: $accent;
     }
   }
 }

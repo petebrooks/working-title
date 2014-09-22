@@ -1,15 +1,31 @@
-<%= form_for @vote, html: {id: "upvote"} do |f| %>
-  <%= f.hidden_field :voteable_id, :value => "#{@version.id}" %>
-  <%= f.hidden_field :voteable_type, :value => "Version" %>
-  <%= f.hidden_field :positive, :value => true %>
-  <%= f.submit "Upvote" %>
-<% end %>
-
-<div class="score"><%= @version.calculate_branch_vote_score %></div>
-
-<%= form_for @vote, html: {id: "downvote"} do |f| %>
-  <%= f.hidden_field :voteable_id, :value => "#{@version.id}" %>
-  <%= f.hidden_field :voteable_type, :value => "Version" %>
-  <%= f.hidden_field :positive, :value => false %>
-  <%= f.submit "Downvote" %>
-<% end %>
+<%
+ status = false
+ new_class = ""
+ if current_user && current_user.voted_on_this?(@version)
+ 	status = true
+ 	new_class = "padded"
+ end
+%>
+<div class="vote-container">
+  <% if !status %>
+    <%= form_for @vote, html: {id: "upvote"} do |f| %>
+      <%= f.hidden_field :voteable_id, :value => "#{@version.id}" %>
+      <%= f.hidden_field :voteable_type, :value => "Version" %>
+      <%= f.hidden_field :positive, :value => true %>
+      <%= button_tag do %>
+        <i class="fa fa-arrow-circle-up"></i>
+      <% end %>
+    <% end %>
+  <% end %>
+  <div class="score <%= new_class %>"><%= @version.calculate_branch_vote_score %></div>
+  <% if !status %>
+    <%= form_for @vote, html: {id: "downvote"} do |f| %>
+      <%= f.hidden_field :voteable_id, :value => "#{@version.id}" %>
+      <%= f.hidden_field :voteable_type, :value => "Version" %>
+      <%= f.hidden_field :positive, :value => false %>
+      <%= button_tag do %>
+        <i class="fa fa-arrow-circle-down"></i>
+      <% end %>
+    <% end %>
+  <% end %>
+</div>
