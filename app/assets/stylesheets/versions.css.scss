@@ -77,13 +77,30 @@
 
 div#children_container {
   display: block;
-    width: 80%;
+    width: 100%;
   margin: 0 auto;
+  padding-top: 1rem;
 }
 
 div#children {
   display: none;
-  margin-left: 15px;
+  float: right;
+  width: 90%;
+
+  p {
+   margin-bottom: 0;
+   padding-bottom: 0;
+  }
+
+  small {
+    padding: 0 0 0 0.5rem;
+    margin: 0;
+    font-size: 0.6rem;
+  }
+
+  span {
+    display: block;
+  }
 }
 
 #collapse_branch {

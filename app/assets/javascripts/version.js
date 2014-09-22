@@ -49,8 +49,8 @@ $(document).ready(function() {
       },
       overwrite: false,
       position: {
-        my: 'right center',
-        at: 'left center',
+        my: 'left center',
+        at: 'right center',
         target: $(this)
       },
       show: {

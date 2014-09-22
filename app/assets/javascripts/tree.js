@@ -71,7 +71,10 @@ $(document).ready(function(){
         d3.select(this).select("text").remove();
       })
       .on("click", function() { this.attr('fill', 'lightgray');})
-      .on("click", click);
+      .on("click", click)
+      .on("dblclick", (function(d) {
+        
+      }););
 
     nodeEnter.append('circle')
       .style("fill", "white")

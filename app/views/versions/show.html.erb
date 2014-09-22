@@ -23,7 +23,6 @@
     <% end %>
     <span class="hidden">Added by <%= version.contributor.name %> on <%= version.updated_at.strftime("%b %e, %Y") %></span>
     <% end %>
-  </div>
 
   <div id="children_container" class="clearfix">
   <span>
@@ -32,8 +31,10 @@
   </span>
     <div id="children"
     <% @version.children.each do |child| %>
-    <p><%= link_to "#{child.contribution}", project_version_path(child.project, child) %></p>
+    <span><%= link_to "#{child.contribution}", project_version_path(child.project, child) %></span>
+    <small><%=child.updated_at.strftime("%b %e, %Y")%></small>
     <% end %>
+  </div>
   </div>
 </div>
 
