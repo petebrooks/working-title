@@ -117,15 +117,22 @@
 
 div.half {
   width: 50%;
-  border: 1px solid black;
 }
 
 div.tree {
   float: left;
 }
 
-div.text {
+div.tree_text {
   float: right;
+  padding-top: 1rem;
+  #current {
+    background-color: $accent;
+  }
+  p {
+  padding: 0;
+  margin: 0;
+  }
 }
 
 @media (max-width:400px){

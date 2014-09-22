@@ -17,7 +17,7 @@ $(document).ready(function(){
 		return (!d.children || d.children.length === 0) ? null : d.children;
 	});
 
-  var text_div = $("div.text");
+  var text_div = $("div.tree_text");
 
   var svg = d3.select("body div.tree")
   .append("svg")
@@ -61,58 +61,33 @@ $(document).ready(function(){
   	var node = svg.selectAll('g.node')
 	  	.data(nodes);
 
-    // var text = text_div.selectAll('.node_text')
-    //   .data(nodes);
-
-    // text.enter()
-    //   .append('g')
-    //   .append('text')
-    //   .text(function(d) { return d.contribution} )
-    //   .attr("x", function(d) { d.x });
-
-    // text.exit().remove();
-
-    // text.enter()
-    //   .append("text")
-    //   .attr('class', 'node_text')
-    //   .text(function(d) {d.contribution})
-    //   .attr('y', function(d) {d.y});
-
-    // text.transition()
-    //   .text(function(d) {d.contribution});
-
     var nodeEnter = node.enter()
       .append('g')
       .attr('class', 'node')
       .attr('id', function(d) { return d.nodeid; })
 
-	  	.on('mouseover', function(d) {
-	  		// d3.select(this).insert("text")
-        // var contribution = 
-	  		// text_div.append("svg:text").attr('y', d.y)
-     //    .text(d.contribution);
-	  	})
-	  	.on('mouseout', function(d) {
-	  		d3.select(this).select("text").remove();
-	  	})
-	  	.on("click", click);
+      .on('mouseover', function(d) {
+      })
+      .on('mouseout', function(d) {
+        d3.select(this).select("text").remove();
+      })
+      .on("click", function() { this.attr('fill', 'lightgray');})
+      .on("click", click);
 
-  	nodeEnter.append('circle')
+    nodeEnter.append('circle')
       .style("fill", "white")
       .style("stroke", "black")
       .attr("r", function(d) { return d.r });
 
       d3.select('.node circle').style("fill", "red");
 
-      nodeUpdate = node.transition()
-      .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")";})
-
-      nodeUpdate;
+      node.transition()
+        .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")";});
 
       node.exit().remove();
 
       var link = svg.selectAll("path.link")
-	      .data(links, function(d) { return d.target.id });
+        .data(links, function(d) { return d.target.id });
 
       link.enter().insert("path", "g")
 	      .attr("class", "link")
@@ -142,17 +117,23 @@ $(document).ready(function(){
     d.text.forEach(function(line){
       text_div.append("<p>" + line + "</p>");
     });
-    text_div.append('<p>' + d.contribution + "</p>");
-    console.log(d.text.join("\n"));
+    text_div.append('<p id="current">' + d.contribution + "</p>");
+    console.log(d.parent);
   	if (d.children) {
   		d._children = d.children;
   		d.children = null;
     } else {
       d.children = d._children;
       d._children = null;
-    	d3.select(this).select("circle").style("fill", "lightgray");
     }
-  	update(d);
+    svg.selectAll('g.node circle').style("fill", function(d){
+    if(d.children) {
+      return "lightgray";
+    } else {
+      return "white";
+    };
+  });
+    update(d);
     // debugger;
   };
 
