@@ -11,7 +11,7 @@ categories.each do |category|
   Category.create!(name: category)
 end
 
-5.times do
+6.times do
   name = Faker::Name.name
   User.create!(name: name, email: Faker::Internet.email(name), password: "password", password_confirmation: "password")
 end

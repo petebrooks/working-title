@@ -4,11 +4,14 @@
   <div class="byline"><div class="byline-label"><%= @version.project.category.name %> Last Updated By:</div><div class="byline-name"><%= @version.contributor.name %></div><div class="byline-date"><%= @version.updated_at.strftime("%b %e, %Y") %></div></div>
 
 
+  <div class="controls clearfix">
   <% unless @version.previous_version == nil %>
-  <div class="controls">
+    <div class="back-links">
   <%= link_to '<i class="fa fa-backward"></i>Rewind'.html_safe, project_version_path(@version.project, @version.previous_version) %>
   <%= link_to '<i class="fa fa-fast-backward"></i>Back to Original'.html_safe, project_version_path(@version.project, @version.project.versions.first) %>
+</div>
   <% end %>
+  <%= render 'votes/form_versions' %>
 </div>
 
   <div id="branch_text" versionid="<%= @version.id %>" projectid="<%= @version.project_id %>">
@@ -34,5 +37,4 @@
   </div>
   </div>
 
-  <%= render 'votes/form_versions' %>
 </div>
