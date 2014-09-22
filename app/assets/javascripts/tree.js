@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 	var treeData = $('.tree_data').data('data');
 	var height = 500;
-	var width = 1000;
+	var width = 300;
 
 	var nodeColor = "blue";
 	var highlightColor = "red";
@@ -10,18 +10,19 @@ $(document).ready(function(){
 	var tree = d3.layout.tree()
 	.sort(null)
 	.size([height, width])
+  .separation(function(a, b){
+    return (a.parent == b.parent ? 0.3 : 0.6);
+  })
 	.children(function(d) {
 		return (!d.children || d.children.length === 0) ? null : d.children;
 	});
 
-  // var diagonal = d3.svg.diagonal()
-  // .projection(function(d) { return [d.x, d.y]; });
+  var text_div = $("div.text");
 
   var svg = d3.select("body div.tree")
   .append("svg")
   .attr('width', width)
   .attr('height', height)
-  .attr('preserveAspectRatio', 'xMidyMid meet')
   .append("g")
   .attr('width', width)
   .attr('height', height);
@@ -49,22 +50,47 @@ $(document).ready(function(){
 
   	var voteScale = d3.scale.linear()
 	  	.domain(voteRange)
-	  	.range([2, 18]);
+	  	.range([4, 12]);
 
-  	nodes.forEach(function(d){ d.y = d.depth * 40 + 10; });
+  	nodes.forEach(function(d){
+      d.r = voteScale(d.voteScore);
+      d.y = d.depth * 30 + 30; 
+      d.x = d.x * 0.5;
+    });
 
   	var node = svg.selectAll('g.node')
 	  	.data(nodes);
 
+    // var text = text_div.selectAll('.node_text')
+    //   .data(nodes);
 
-  	var nodeEnter = node.enter()
-	  	.append('g')
-	  	.attr('class', 'node')
-	  	.attr('id', function(d) { return d.nodeid; })
+    // text.enter()
+    //   .append('g')
+    //   .append('text')
+    //   .text(function(d) { return d.contribution} )
+    //   .attr("x", function(d) { d.x });
+
+    // text.exit().remove();
+
+    // text.enter()
+    //   .append("text")
+    //   .attr('class', 'node_text')
+    //   .text(function(d) {d.contribution})
+    //   .attr('y', function(d) {d.y});
+
+    // text.transition()
+    //   .text(function(d) {d.contribution});
+
+    var nodeEnter = node.enter()
+      .append('g')
+      .attr('class', 'node')
+      .attr('id', function(d) { return d.nodeid; })
+
 	  	.on('mouseover', function(d) {
-	  		d3.select(this).insert("text")
-	  		.text(function(d) { return d.contribution})
-	  		.attr("flood-color", "white");
+	  		// d3.select(this).insert("text")
+        // var contribution = 
+	  		// text_div.append("svg:text").attr('y', d.y)
+     //    .text(d.contribution);
 	  	})
 	  	.on('mouseout', function(d) {
 	  		d3.select(this).select("text").remove();
@@ -72,8 +98,9 @@ $(document).ready(function(){
 	  	.on("click", click);
 
   	nodeEnter.append('circle')
-      .style("fill", nodeColor)
-      .attr("r", function(d) { return voteScale(d.voteScore) });
+      .style("fill", "white")
+      .style("stroke", "black")
+      .attr("r", function(d) { return d.r });
 
       d3.select('.node circle').style("fill", "red");
 
@@ -84,22 +111,17 @@ $(document).ready(function(){
 
       node.exit().remove();
 
-      var link = svg.selectAll("line.link")
+      var link = svg.selectAll("path.link")
 	      .data(links, function(d) { return d.target.id });
 
-      link.enter().insert("line", "g")
+      link.enter().insert("path", "g")
 	      .attr("class", "link")
 	      .attr("stroke", "black")
-	      .attr("x1", function(d) { return d.source.x0 })
-	      .attr("y1", function(d) { return d.source.y0 })
-	      .attr("x2", function(d) { return d.source.x0 })
-	      .attr("y2", function(d) { return d.source.y0 });
+        .attr('fill', 'none')
+        .attr('d', elbow);
 
       link.transition()
-	      .attr("x1", function(d) { return d.source.x })
-	      .attr("y1", function(d) { return d.source.y })
-	      .attr("x2", function(d) { return d.target.x })
-	      .attr("y2", function(d) { return d.target.y })
+        .attr('d', elbow);
 
       link.exit().remove();
 
@@ -109,16 +131,29 @@ $(document).ready(function(){
       })
   }
 
+  function elbow(d, i) {
+  return "M" + d.source.x + "," + d.source.y
+       + "L" + d.source.x + "," + d.target.y 
+       + "L" + d.target.x + "," + d.target.y
+}
+
   function click(d) {
+    text_div.empty()
+    d.text.forEach(function(line){
+      text_div.append("<p>" + line + "</p>");
+    });
+    text_div.append('<p>' + d.contribution + "</p>");
+    console.log(d.text.join("\n"));
   	if (d.children) {
   		d._children = d.children;
   		d.children = null;
-  	} else {
-  		d.children = d._children
-  		d._children = null;
-  	}
-  	console.log(d);
+    } else {
+      d.children = d._children;
+      d._children = null;
+    	d3.select(this).select("circle").style("fill", "lightgray");
+    }
   	update(d);
+    // debugger;
   };
 
 });

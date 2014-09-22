@@ -115,6 +115,19 @@
   margin: 10px;
 }
 
+div.half {
+  width: 50%;
+  border: 1px solid black;
+}
+
+div.tree {
+  float: left;
+}
+
+div.text {
+  float: right;
+}
+
 @media (max-width:400px){
   .all_projects{
     width: 100%;
