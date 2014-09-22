@@ -1,93 +1,22 @@
-<div class = "container">
-	<% if current_user %>
-	  <h3>Hello <%=current_user.name%>! </h3>
-	<% end %>
-
+<div class = "container clearfix">
   <div id="welcome">
-    <div class="project_box_welcome" id="project_box_1" >
-      <%= link_to project_path(@projects[0]) do %>
-        <% if @projects[0].category.name == 'Story' %>
-          <i class="fa fa-book">
-        <% elsif @projects[0].category.name == 'Poem' %>
-          <i class="fa fa-bars">
-        <% elsif @projects[0].category.name == 'Song' %>
-          <i class="fa fa-music">
+    <% if @projects.length > 0 %>
+      <% @projects.each_with_index do |project, index| %>
+        <div class="project_box_welcome" id="project_box_<%= index + 1 %>" >
+          <%= link_to project_path(@projects[index]) do %>
+            <% if @projects[index].category.name == 'Story' %>
+              <i class="fa fa-book">
+              <% elsif @projects[index].category.name == 'Poem' %>
+                <i class="fa fa-bars">
+                <% elsif @projects[index].category.name == 'Song' %>
+                  <i class="fa fa-music">
+                  <% end %>
+                  <span class="project_name"><p><%= @projects[index].name %></span><br><br>
+                    <span class="project_initiator">Initiated by:
+                      <%= @projects[index].initiator.name %></p></span></i>
+              <% end %>
+            </div>
+          <% end %>
         <% end %>
-        <span class="project_name"><p><%= @projects[0].name %></span><br><br>
-        <span class="project_initiator">Initiated by: <%= @projects[0].initiator.name %></p></span></i>
-      <% end %>
+      </div>
     </div>
-
-     <div class="project_box_welcome" id="project_box_2" >
-      <%= link_to project_path(@projects[1]) do %>
-        <% if @projects[1].category.name == 'Story' %>
-          <i class="fa fa-book">
-        <% elsif @projects[1].category.name == 'Poem' %>
-          <i class="fa fa-bars">
-        <% elsif @projects[1].category.name == 'Song' %>
-          <i class="fa fa-music">
-        <% end %>
-        <span class="project_name"><p><%= @projects[1].name %></span><br><br>
-        <span class="project_initiator">Initiated by: <%= @projects[1].initiator.name %></p></span></i>
-      <% end %>
-    </div>
-
-     <div class="project_box_welcome" id="project_box_3" >
-      <%= link_to project_path(@projects[2]) do %>
-        <% if @projects[2].category.name == 'Story' %>
-          <i class="fa fa-book">
-        <% elsif @projects[2].category.name == 'Poem' %>
-          <i class="fa fa-bars">
-        <% elsif @projects[2].category.name == 'Song' %>
-          <i class="fa fa-music">
-        <% end %>
-        <span class="project_name"><p><%= @projects[2].name %></span> <br><br>
-        <span class="project_initiator">Initiated by: <%= @projects[2].initiator.name %></p></span></i>
-      <% end %>
-    </div>
-
-     <div class="project_box_welcome" id="project_box_4" >
-      <%= link_to project_path(@projects[3]) do %>
-        <% if @projects[3].category.name == 'Story' %>
-          <i class="fa fa-book">
-        <% elsif @projects[3].category.name == 'Poem' %>
-          <i class="fa fa-bars">
-        <% elsif @projects[3].category.name == 'Song' %>
-          <i class="fa fa-music">
-        <% end %>
-        <span class="project_name"><p><%= @projects[3].name %></span><br><br>
-        <span class="project_initiator">Initiated by: <%= @projects[3].initiator.name %></p></span></i>
-      <% end %>
-    </div>
-
-     <div class="project_box_welcome" id="project_box_5" >
-      <%= link_to project_path(@projects[4]) do %>
-        <% if @projects[4].category.name == 'Story' %>
-          <i class="fa fa-book">
-        <% elsif @projects[4].category.name == 'Poem' %>
-          <i class="fa fa-bars">
-        <% elsif @projects[4].category.name == 'Song' %>
-          <i class="fa fa-music">
-        <% end %>
-        <span class="project_name"><p><%= @projects[4].name %></span><br><br>
-        <span class="project_initiator">Initiated by: <%= @projects[4].initiator.name %></p></span></i>
-      <% end %>
-    </div>
-
-    <div class="project_box_welcome" id="project_box_6" >
-      <%= link_to project_path(@projects[5]) do %>
-        <% if @projects[5].category.name == 'Story' %>
-          <i class="fa fa-book">
-        <% elsif @projects[5].category.name == 'Poem' %>
-          <i class="fa fa-bars">
-        <% elsif @projects[5].category.name == 'Song' %>
-          <i class="fa fa-music">
-        <% end %>
-        <span class="project_name"><p><%= @projects[5].name %></span><br><br>
-        <span class="project_initiator">Initiated by: <%= @projects[5].initiator.name %></p></span></i>
-      <% end %>
-    </div>
-
-
-  </div>
-</div>
