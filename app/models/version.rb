@@ -57,6 +57,7 @@ class Version < ActiveRecord::Base
 
   def create_tree_hash
     { id: self.id,
+      project_id: self.project.id,
       contribution: self.contribution,
       text: ancestors_text,
       voteScore: calculate_branch_vote_score,

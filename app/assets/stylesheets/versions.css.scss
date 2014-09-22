@@ -111,6 +111,14 @@ div#children {
   display: none;
 }
 
+i#tree_link {
+  color: lightgray;
+}
+
+i#tree_link:hover {
+  color: gray;
+}
+
 input#add_contribution {
   margin: 0;
   display: block;

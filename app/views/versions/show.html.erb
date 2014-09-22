@@ -1,5 +1,5 @@
-<div class = "container">
-  <h2 class="page-title"><%= @version.project.name %></h2>
+<div class = "container" projectid="<%= @version.project.id %>">
+  <h2 class="page-title"><%= @version.project.name %> <%= fa_icon "tree", id: "tree_link" %></h2>
   <%= image_tag @version.contributor.gravatar_url(default: image_url("default-icon.png")), class: "profile-photo" %>
   <div class="byline"><div class="byline-label"><%= @version.project.category.name %> Last Updated By:</div><div class="byline-name"><%= @version.contributor.name %></div><div class="byline-date"><%= @version.updated_at.strftime("%b %e, %Y") %></div></div>
 
@@ -24,19 +24,24 @@
     <span class="hidden">Added by <%= version.contributor.name %> on <%= version.updated_at.strftime("%b %e, %Y") %></span>
     <% end %>
 
-  <div id="children_container" class="clearfix">
-  <span>
-    <%= fa_icon "plus-circle", id:"expand_branch" %>
-    <%= fa_icon "minus-circle", id:"collapse_branch" %>
-  </span>
-    <div id="children"
-    <% @version.children.each do |child| %>
-    <span><%= link_to "#{child.contribution}", project_version_path(child.project, child) %></span>
-    <small><%=child.updated_at.strftime("%b %e, %Y")%></small>
-    <% end %>
+    <% unless @version.children.count == 0 %>
+    <div id="children_container" class="clearfix">
+
+      <span>
+        <%= fa_icon "plus-circle", id:"expand_branch" %>
+        <%= fa_icon "minus-circle", id:"collapse_branch" %>
+      </span>
+
+      <div id="children"
+      <% @version.children.each do |child| %>
+      <span><%= link_to "#{child.contribution}", project_version_path(child.project, child) %></span>
+      <small><%=child.updated_at.strftime("%b %e, %Y")%></small>
+      <% end %>
+    </div>
+
   </div>
-  </div>
-</div>
+  <% end %>
 
 </div>
+
 </div>

@@ -2,6 +2,7 @@ $(document).ready(function() {
 
   var branch_text = $("#branch_text");
   var children = $("div#children");
+  var project_id = branch_text.attr("projectid");
 
   // children.slideUp();
 
@@ -18,6 +19,10 @@ $(document).ready(function() {
     children.slideUp();
   });
 
+  $("i#tree_link").click(function() {
+    window.location = "/projects/" + project_id + "/tree";
+  });
+
   branch_text.on("click", "#contribution", function(){
     $("input#add_contribution").remove();
     $(this).after().after('<input id="add_contribution" placeholder="Add new text here"> </input>');
@@ -27,7 +32,6 @@ $(document).ready(function() {
     var contribution = this.value;
     var key = e.which;
     var version_id = branch_text.attr("versionid");
-    var project_id = branch_text.attr("projectid");
 
     if(key == 13) {
       $.post("/projects/" + project_id + "/versions", {
