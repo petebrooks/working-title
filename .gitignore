@@ -1,4 +1,5 @@
 .env
 tmp/
 log/
+.DS_STORE
 db/development.sqlite3
